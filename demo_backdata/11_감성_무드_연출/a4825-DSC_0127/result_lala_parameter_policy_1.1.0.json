@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "calibration_version": "1.1.0",
+  "tool": "lut",
+  "status": "completed",
+  "result_file": "lala_parameter_policy_1.1.0.jpg",
+  "request_id": "rerun_policy_c9a5a913d46cd133",
+  "output_sha256": "4d48093f7f82236be5819c3b2df060708e582dacdd36e0ca543ea52cefbc1ae4",
+  "evidence": [
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "restrained-warm-cool-separation",
+      "version": "1.0.2"
+    }
+  ],
+  "parameters": {
+    "preset": "romance",
+    "lut_intensity": 0.52,
+    "grain_amount": 0.0,
+    "halation": 0.0
+  }
+}

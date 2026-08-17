@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "calibration_version": "1.1.0",
+  "tool": "lut",
+  "status": "completed",
+  "result_file": "lala_parameter_policy_1.1.0.jpg",
+  "request_id": "rerun_policy_d3d1c7ea65d42775",
+  "output_sha256": "134503a9316ee1cb1fe950b2619e1487b87301e1ed74ee7ea79a17ebf053804f",
+  "evidence": [
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "restrained-atmospheric-softness",
+      "version": "1.0.0"
+    }
+  ],
+  "parameters": {
+    "preset": "matte_fade",
+    "lut_intensity": 0.52,
+    "grain_amount": 0.07,
+    "halation": 0.0
+  }
+}

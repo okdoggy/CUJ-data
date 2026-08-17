@@ -12,6 +12,7 @@ LALA JPEGs and prompt-free result_lala.json metadata into CUJ case directories.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import shutil
@@ -103,6 +104,71 @@ def export_lala_results(repo_root: Path, evaluation_root: Path) -> int:
     return exported
 
 
+def _parameter_policy_metadata(record: dict[str, Any], tool: str, calibration_version: str) -> dict[str, Any]:
+    metadata: dict[str, Any] = {
+        "schema_version": "1.0",
+        "runner": "Learnable Agent",
+        "calibration_version": calibration_version,
+        "tool": tool,
+        "status": "completed",
+        "result_file": f"lala_parameter_policy_{calibration_version}.jpg",
+        "request_id": record["request_id"],
+        "output_sha256": record["output_sha256"],
+        "evidence": record.get("evidence", []),
+    }
+    if tool == "lut":
+        metadata["parameters"] = {
+            key: record[key]
+            for key in ("preset", "lut_intensity", "grain_amount", "halation")
+        }
+    else:
+        metadata["parameters"] = {}
+    return metadata
+
+
+def export_parameter_policy_rerun(repo_root: Path, rerun_root: Path) -> int:
+    """Export named, prompt-free parameter-policy rerun artifacts without replacing baseline LALA."""
+    selection = json.loads((rerun_root / "selection.json").read_text(encoding="utf-8"))
+    calibration_version = str(selection["calibration_version"])
+    records = {
+        record["case_id"]: record
+        for record in read_jsonl(rerun_root / "rerun.jsonl")
+        if record.get("status") == "COMPLETED"
+    }
+    exported = 0
+    data_root = (repo_root / "demo_backdata").resolve()
+    for entry in selection["cases"]:
+        relative_path = str(entry["relative_path"])
+        case_id = hashlib.sha256(relative_path.encode("utf-8")).hexdigest()[:16]
+        record = records.get(case_id)
+        if record is None:
+            raise ValueError(f"missing completed rerun record for {case_id}")
+        selected_tools = record.get("selected_tools", [])
+        if len(selected_tools) != 1:
+            raise ValueError(f"expected one selected tool for {case_id}")
+        case_dir = (data_root / relative_path).resolve()
+        if not case_dir.is_relative_to(data_root):
+            raise ValueError(f"invalid selected case path: {relative_path}")
+        source = rerun_root / record["output_path"]
+        if not source.is_file():
+            raise FileNotFoundError(f"missing rerun output for {case_id}: {source}")
+        result_file = f"lala_parameter_policy_{calibration_version}.jpg"
+        metadata_file = f"result_lala_parameter_policy_{calibration_version}.json"
+        _write_jpeg(source, case_dir / result_file)
+        (case_dir / metadata_file).write_text(
+            json.dumps(
+                _parameter_policy_metadata(record, selected_tools[0], calibration_version),
+                ensure_ascii=False,
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
+        exported += 1
+    return exported
+
+
 def _image_cell(
     label: str, relative_path: str | None, style: str = "", missing_text: str | None = None
 ) -> str:
@@ -119,7 +185,7 @@ def _image_cell(
 
 
 def build_lala_html(repo_root: Path) -> Path:
-    """Build a standalone-in-repository sheet with BEFORE/Vibe/LALA/Nano/FiveK columns."""
+    """Build a standalone-in-repository sheet with baseline and rerun LALA columns."""
     manifest = json.loads((repo_root / "manifest.json").read_text(encoding="utf-8"))
     data_root = repo_root / "demo_backdata"
     cards: list[str] = []
@@ -132,12 +198,19 @@ def build_lala_html(repo_root: Path) -> Path:
             before = _find_image(case_dir, "before")
             after = _find_image(case_dir, "after")
             lala = _find_image(case_dir, "lala")
+            parameter_policy_lala = _find_image(case_dir, "lala_parameter_policy_1.1.0")
             nano = _find_image(data_root / "_nano_banana" / scenario["id"], stem)
             fivek = _find_image(data_root / "_baseline_fivek", stem) if scenario.get("baseline") else None
             cells = [
                 _image_cell("BEFORE", f"{base}/{before.name}" if before else None),
                 _image_cell("Vibe AFTER", f"{base}/{after.name}" if after else None),
                 _image_cell("LALA", f"{base}/{lala.name}" if lala else None, "background:rgba(14,165,233,.85)"),
+                _image_cell(
+                    "LALA 1.1.0",
+                    f"{base}/{parameter_policy_lala.name}" if parameter_policy_lala else None,
+                    "background:rgba(168,85,247,.85)",
+                    "parameter-policy rerun 없음",
+                ),
                 _image_cell(
                     "Nano Banana",
                     f"demo_backdata/_nano_banana/{scenario['id']}/{nano.name}" if nano else None,
@@ -151,6 +224,12 @@ def build_lala_html(repo_root: Path) -> Path:
                 ),
             ]
             metadata = json.loads((case_dir / "result_lala.json").read_text(encoding="utf-8"))
+            parameter_policy_metadata_path = case_dir / "result_lala_parameter_policy_1.1.0.json"
+            parameter_policy_metadata = (
+                json.loads(parameter_policy_metadata_path.read_text(encoding="utf-8"))
+                if parameter_policy_metadata_path.is_file()
+                else None
+            )
             review_path = case_dir / "evaluation_lala.json"
             review = json.loads(review_path.read_text(encoding="utf-8")) if review_path.is_file() else None
             tool = metadata["tool"]
@@ -168,7 +247,14 @@ def build_lala_html(repo_root: Path) -> Path:
                 f'<header><b>{html.escape(str(scenario["section_num"]))}. {html.escape(scenario["section_title"])}</b>'
                 f'<span>{html.escape(stem)}</span></header>'
                 '<section class="images">' + "".join(cells) + "</section>"
-                f'<footer><b>LALA: {html.escape(tool)}</b> · <code>{html.escape(json.dumps(details, ensure_ascii=False, sort_keys=True))}</code>{review_html}</footer>'
+                f'<footer><b>LALA: {html.escape(tool)}</b> · <code>{html.escape(json.dumps(details, ensure_ascii=False, sort_keys=True))}</code>'
+                + (
+                    f'<br><b>LALA 1.1.0: {html.escape(parameter_policy_metadata["tool"])}</b> · '
+                    f'<code>{html.escape(json.dumps(parameter_policy_metadata["parameters"], ensure_ascii=False, sort_keys=True))}</code>'
+                    if parameter_policy_metadata
+                    else ""
+                )
+                + f'{review_html}</footer>'
                 '</article>'
             )
     document = """<!doctype html><html lang="ko"><head><meta charset="utf-8">
@@ -177,13 +263,13 @@ body{margin:0;background:#0f172a;color:#e2e8f0;font-family:-apple-system,BlinkMa
 main{max-width:1800px;margin:auto;padding:24px}h1{margin:0}.sub{color:#94a3b8;margin:8px 0 24px}
 .card{background:#1e293b;border:1px solid #334155;border-radius:10px;margin:16px 0;overflow:hidden}
 .card header{padding:12px}.card header span{color:#94a3b8;margin-left:10px;font-size:12px}
-.images{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:#0f172a}.images figure{margin:0;position:relative;min-height:120px}.images img{width:100%;display:block}
+.images{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px;background:#0f172a}.images figure{margin:0;position:relative;min-height:120px}.images img{width:100%;display:block}
 figcaption{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.7);padding:2px 7px;border-radius:8px;font-size:11px;z-index:1}.missing{display:flex;align-items:center;justify-content:center;color:#64748b;border:1px dashed #475569;font-size:12px}.missing figcaption{background:#475569}
 footer{padding:9px 12px;color:#94a3b8;font-size:12px;word-break:break-word}footer b{color:#7dd3fc}code{color:#cbd5e1}
 .review{display:grid;grid-template-columns:110px 1fr;gap:8px;border-top:1px solid #334155;margin-top:9px;padding-top:9px;color:#cbd5e1}.review b{color:#facc15}
 @media(max-width:1000px){.images{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head><body><main><h1>CUJ Learnable Agent 비교 결과</h1>
-<div class="sub">BEFORE · Vibe AFTER · LALA · Nano Banana · Expert(FiveK)를 같은 case에서 비교합니다. FiveK는 제공된 case에만 표시됩니다.</div>"""
+<div class="sub">BEFORE · Vibe AFTER · 기존 LALA · LALA 1.1.0 rerun · Nano Banana · Expert(FiveK)를 같은 case에서 비교합니다. FiveK는 제공된 case에만 표시됩니다.</div>"""
     document += "\n".join(cards) + "</main></body></html>\n"
     output = repo_root / "CUJ_LALA_결과.html"
     output.write_text(document, encoding="utf-8", newline="\n")
@@ -193,12 +279,18 @@ footer{padding:9px 12px;color:#94a3b8;font-size:12px;word-break:break-word}foote
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path.cwd())
-    parser.add_argument("--evaluation-root", type=Path, required=True)
+    parser.add_argument("--evaluation-root", type=Path)
+    parser.add_argument("--rerun-root", type=Path)
     parser.add_argument("--skip-export", action="store_true")
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
-    evaluation_root = args.evaluation_root.resolve()
-    exported = 0 if args.skip_export else export_lala_results(repo_root, evaluation_root)
+    if not args.skip_export and args.evaluation_root is None:
+        parser.error("--evaluation-root is required unless --skip-export is set")
+    exported = 0
+    if args.evaluation_root is not None and not args.skip_export:
+        exported += export_lala_results(repo_root, args.evaluation_root.resolve())
+    if args.rerun_root is not None:
+        exported += export_parameter_policy_rerun(repo_root, args.rerun_root.resolve())
     output = build_lala_html(repo_root)
     print(f"exported={exported} html={output}")
 

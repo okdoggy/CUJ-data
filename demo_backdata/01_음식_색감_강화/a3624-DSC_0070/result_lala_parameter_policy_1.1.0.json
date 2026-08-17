@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "calibration_version": "1.1.0",
+  "tool": "generate_ai",
+  "status": "completed",
+  "result_file": "lala_parameter_policy_1.1.0.jpg",
+  "request_id": "rerun_policy_27556bd5b530f9c8",
+  "output_sha256": "e0f83d3c3837861a8aeb745d26c14c70c998b830b8a4bf45d14b1ced89f273cd",
+  "evidence": [
+    {
+      "skill_id": "protected-local-color-change",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
+    }
+  ],
+  "parameters": {}
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "calibration_version": "1.1.0",
+  "tool": "generate_ai",
+  "status": "completed",
+  "result_file": "lala_parameter_policy_1.1.0.jpg",
+  "request_id": "rerun_policy_8ff9d9ddb2a4db56",
+  "output_sha256": "6b3136b09f0b7694dce7ceffb748852ea7990dfbef56a545f9d2d3660c435fde",
+  "evidence": [
+    {
+      "skill_id": "natural-subject-background-separation",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
+    }
+  ],
+  "parameters": {}
+}

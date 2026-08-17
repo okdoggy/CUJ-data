@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import importlib.util
 import json
 import tempfile
@@ -22,6 +23,56 @@ def load_module():
 
 
 class LalaEvaluationExportTests(unittest.TestCase):
+    def test_export_parameter_policy_rerun_preserves_existing_result(self) -> None:
+        module = load_module()
+        with tempfile.TemporaryDirectory() as raw_temp:
+            root = Path(raw_temp)
+            relative_path = "01_example/image-a"
+            case = root / "demo_backdata" / relative_path
+            case.mkdir(parents=True)
+            (case / "lala.jpg").write_bytes(b"existing-result")
+            rerun = root / "rerun"
+            (rerun / "results").mkdir(parents=True)
+            case_id = hashlib.sha256(relative_path.encode("utf-8")).hexdigest()[:16]
+            Image.new("RGB", (2, 2), "blue").save(
+                rerun / "results" / f"{case_id}.png", format="PNG"
+            )
+            (rerun / "selection.json").write_text(
+                json.dumps({"calibration_version": "1.1.0", "cases": [{"relative_path": relative_path}]}),
+                encoding="utf-8",
+            )
+            (rerun / "rerun.jsonl").write_text(
+                json.dumps(
+                    {
+                        "case_id": case_id,
+                        "status": "COMPLETED",
+                        "request_id": "rerun_policy_example",
+                        "selected_tools": ["lut"],
+                        "preset": "clean_modern",
+                        "lut_intensity": 0.45,
+                        "grain_amount": 0.0,
+                        "halation": 0.0,
+                        "output_path": f"results/{case_id}.png",
+                        "output_sha256": "b" * 64,
+                        "evidence": [{"skill_id": "test-note", "version": "1.0.0"}],
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            exported = module.export_parameter_policy_rerun(root, rerun)
+
+            self.assertEqual(exported, 1)
+            self.assertEqual((case / "lala.jpg").read_bytes(), b"existing-result")
+            with Image.open(case / "lala_parameter_policy_1.1.0.jpg") as image:
+                self.assertEqual(image.format, "JPEG")
+            metadata = json.loads(
+                (case / "result_lala_parameter_policy_1.1.0.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(metadata["calibration_version"], "1.1.0")
+            self.assertNotIn("prompt", json.dumps(metadata))
+
     def test_export_places_named_result_and_excludes_prompt(self) -> None:
         module = load_module()
         with tempfile.TemporaryDirectory() as raw_temp:
@@ -83,7 +134,7 @@ class LalaEvaluationExportTests(unittest.TestCase):
             root = Path(raw_temp)
             case = root / "demo_backdata" / "01_example" / "image-a"
             case.mkdir(parents=True)
-            for filename in ("before.jpg", "after.jpg", "lala.jpg"):
+            for filename in ("before.jpg", "after.jpg", "lala.jpg", "lala_parameter_policy_1.1.0.jpg"):
                 (case / filename).write_bytes(b"image")
             (case / "result_lala.json").write_text(
                 json.dumps({"tool": "lut", "parameters": {"preset": "clean_modern"}}),
@@ -91,6 +142,10 @@ class LalaEvaluationExportTests(unittest.TestCase):
             )
             (case / "evaluation_lala.json").write_text(
                 json.dumps({"verdict": "limited", "review": "직접 시각 검토: 변화가 약함"}),
+                encoding="utf-8",
+            )
+            (case / "result_lala_parameter_policy_1.1.0.json").write_text(
+                json.dumps({"tool": "lut", "parameters": {"preset": "clean_modern"}}),
                 encoding="utf-8",
             )
             manifest = {
@@ -113,6 +168,10 @@ class LalaEvaluationExportTests(unittest.TestCase):
             html = output.read_text(encoding="utf-8")
             self.assertIn("LALA", html)
             self.assertIn("demo_backdata/01_example/image-a/lala.jpg", html)
+            self.assertIn("LALA 1.1.0", html)
+            self.assertIn(
+                "demo_backdata/01_example/image-a/lala_parameter_policy_1.1.0.jpg", html
+            )
             self.assertIn("직접 시각 검토: 변화가 약함", html)
 
 

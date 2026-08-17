@@ -16,6 +16,17 @@
 LALA 결과 아래에는 직접 시각 검토로 작성한 verdict와 관찰을 표시합니다.
 전체 결론과 개선 우선순위는 [VISUAL_REVIEW.md](VISUAL_REVIEW.md)를 참조하세요.
 
+## parameter-policy-1.1.0 재생성
+
+기존 직접 시각 검토에서 `limited`였던 72개 case를 새 parameter policy로 다시 생성했습니다.
+`CUJ_LALA_결과.html`의 **LALA 1.1.0** column에서 기존 LALA와 나란히 확인할 수 있습니다.
+
+- 새 결과 JPEG: `lala_parameter_policy_1.1.0.jpg`
+- 새 prompt-free 실행 metadata: `result_lala_parameter_policy_1.1.0.json`
+- 직접 시각 검토와 calibration 결정: [parameter-policy-1.1.0/VISUAL_REVIEW.md](parameter-policy-1.1.0/VISUAL_REVIEW.md)
+
+기존 `lala.jpg` 및 `result_lala.json`은 비교 기준으로 보존하며 덮어쓰지 않습니다.
+
 ## case별 결과 구조
 
 이제 hash 파일을 찾아갈 필요가 없습니다. 각 완료 case에서 결과와 기록을 함께 확인할 수 있습니다.
