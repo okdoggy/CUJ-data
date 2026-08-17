@@ -1,19 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_gen_d5a8b0a1f625697c",
-  "output_sha256": "19228dc77732e759f1fe5bf8b95883f1425ee40804db888a6cbd6585f0657507",
+  "request_id": "full_remaster_d5a8b0a1f625697c",
+  "output_sha256": "414fa8f4138405bdff4c737533abdb1313966b68a5d16c3994ec013b547e80b2",
   "evidence": [
     {
       "skill_id": "semantic-mask-composition-and-edge-check",
       "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "use_case": "compositing",
-    "actual_size": "1024x1536"
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "새로운 건물, 사람, 구름, 배, 새 또는 장식 요소를 추가하지 않는다.",
+        "동상의 얼굴, 자세, 손, 횃불, 왕관 또는 비례를 변경하지 않는다.",
+        "동상이나 받침대의 경계를 잘라내거나 왜곡하지 않는다.",
+        "배경 교체, 하늘 생성, 아웃페인팅, 색보정, 스타일 변환을 하지 않는다.",
+        "인위적인 선명화, 피부·표면 스무딩, HDR 효과 또는 과도한 대비를 만들지 않는다.",
+        "텍스트, 로고, 워터마크를 추가하지 않는다."
+      ],
+      "constraints": [
+        "자유의 여신상을 명확한 메인 피사체로 유지한다.",
+        "횃불과 불꽃, 왕관, 팔, 몸체의 윤곽이 프레임 밖으로 잘리지 않게 한다.",
+        "받침대의 주요 구조가 피사체의 일부로 읽히도록 충분히 남긴다.",
+        "원본의 세로 2대3 종횡비와 카메라 원근을 유지한다.",
+        "왼쪽의 과도한 빈 하늘과 하단 수면·작은 관람객 영역을 우선 줄인다.",
+        "원본의 구름 형태, 자연광, 색상, 재질감과 사실적인 사진 표현을 보존한다.",
+        "출력 크기는 입력 비율에 가장 가까운 1024x1536으로 한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "Crop and reframe the supplied photograph around its main subject, the Statue of Liberty. Create a tighter vertical composition in which the statue and its pedestal are clearly dominant. Reduce the excessive empty sky on the left and remove most of the nonessential water and tiny foreground visitors at the bottom. Keep the complete torch, flame, raised arm, crown, body silhouette, and the visually important pedestal structure inside the frame with comfortable edge clearance. Preserve the original camera perspective, realistic proportions, daylight, clouds, colors, stone and copper textures, and photographic appearance. Use crop/reframing only; do not redesign, relocate, retouch, or stylize the monument. Maintain a 2:3 portrait composition corresponding to 1024x1536 and do not outpaint new scenery.",
+      "use_case": "compositing"
+    }
+  ],
+  "execution_prompt": "사진의 메인 피사체 기준으로 잘라줘"
 }

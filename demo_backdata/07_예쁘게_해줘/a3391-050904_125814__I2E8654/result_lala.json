@@ -1,30 +1,63 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster → lut",
+  "tool_sequence": [
+    "remaster",
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_99861746c3fb43ac",
-  "output_sha256": "36176db9722c29124649e17a04d8c0d03b58812aad0abddc1b1dc581a485b485",
+  "request_id": "full_remaster_99861746c3fb43ac",
+  "output_sha256": "30bef9adf2e5723fdbb300bd33799e50a6c373c6958c53bed60a76fe5fdbf531",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
-    },
-    {
-      "skill_id": "restrained-warm-cool-separation",
       "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "restrained-warm-cool-separation",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "romance",
-    "lut_intensity": 0.38,
-    "skin_protection": true,
-    "grain_amount": 0.06,
-    "halation": 0.12
-  }
+  "parameters": [
+    {
+      "brightness": 8,
+      "contrast": 2,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -3,
+      "hsl_selective": [],
+      "saturation": 1,
+      "shadows": 7,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": 0,
+      "tint": 0,
+      "vignette": 0
+    },
+    {
+      "grain_amount": 0.0,
+      "halation": 0.0,
+      "lut_intensity": 0.45,
+      "preset": "teal_orange",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "사진 좀 예쁘게 만들어줘"
 }

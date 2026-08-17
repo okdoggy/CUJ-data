@@ -1,22 +1,42 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster",
+  "tool_sequence": [
+    "remaster"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_a271c9ccffb43364",
-  "output_sha256": "96bd3bc805847e1c0c54e1f700a61449d5604aef22c63e5546e7d5e8666d556e",
+  "request_id": "full_remaster_a271c9ccffb43364",
+  "output_sha256": "8f83cdb6b471727d9f5de7f93b2dc34ada5ae986c62cae259d393d4e9ee26089",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   ],
-  "parameters": {
-    "preset": "apple_neutral",
-    "lut_intensity": 0.58,
-    "skin_protection": false,
-    "grain_amount": 0.0,
-    "halation": 0.0
-  }
+  "parameters": [
+    {
+      "brightness": 0,
+      "contrast": 0,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": 0,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": 0,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": -35,
+      "tint": 8,
+      "vignette": 0
+    }
+  ],
+  "execution_prompt": "조명 때문에 누렇게 떴어, 자연광처럼 화이트밸런스 맞춰줘"
 }

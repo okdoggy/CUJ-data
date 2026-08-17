@@ -22,5 +22,6 @@
     "lut_intensity": 0.55,
     "grain_amount": 0.0,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "어둡고 무게감 있는 무드로 만들어줘"
 }

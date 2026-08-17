@@ -1,26 +1,38 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "lut",
+  "tool_sequence": [
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_4e9f52542b222036",
-  "output_sha256": "016d49c3a00857d7cfe292a039a4ef6ee0b9689900b38427edabe0dcb3314b1b",
+  "request_id": "full_remaster_4e9f52542b222036",
+  "output_sha256": "b8eb4b58e64d75e83845194f87c1dc8c1ca5e235fed1f9db9c48da659b6269e0",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "restrained-atmospheric-softness",
       "version": "1.0.0"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.1"
     }
   ],
-  "parameters": {
-    "preset": "matte_fade",
-    "lut_intensity": 0.68,
-    "skin_protection": true,
-    "grain_amount": 0.38,
-    "halation": 0.16
-  }
+  "parameters": [
+    {
+      "grain_amount": 0.06,
+      "halation": 0.02,
+      "lut_intensity": 0.55,
+      "preset": "matte_fade",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "빈티지 필름 카메라로 찍은 것처럼 해줘"
 }

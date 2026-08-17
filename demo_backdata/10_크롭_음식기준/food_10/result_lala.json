@@ -1,19 +1,45 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_gen_eb48b1e6b185bf40",
-  "output_sha256": "3f22fd99e57e98b58ff9f902c363fef5f83ad0b11497bbc1068699c7272ea0ee",
+  "request_id": "full_remaster_eb48b1e6b185bf40",
+  "output_sha256": "8ffbfaab84bc109b1928139098d72c5ae1ccbf4ea0e6f4a9fd1c745fbaf155d3",
   "evidence": [
     {
       "skill_id": "semantic-mask-composition-and-edge-check",
       "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "use_case": "precise-object-edit",
-    "actual_size": "1024x1536"
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "새로운 음식, 접시, 식기, 손, 사람, 글자 또는 장식을 추가하지 않는다.",
+        "과일의 종류나 형태를 바꾸거나 개수를 임의로 늘리거나 줄이지 않는다.",
+        "용기 가장자리나 음식 일부를 부자연스럽게 절단하지 않는다.",
+        "과도한 배경 흐림, 인공적인 보케, 색보정 또는 조명 변경을 적용하지 않는다.",
+        "원본에 없는 테이블 표면이나 배경을 크게 생성해 화면을 확장하지 않는다.",
+        "음식 표면을 매끈하게 재해석하거나 세부 질감을 손상하지 않는다."
+      ],
+      "constraints": [
+        "망고스틴과 손질된 노란 과일 두 용기를 모두 프레임 안에 완전하게 유지한다.",
+        "음식과 검은색 용기의 기존 위치 관계, 형태, 개수 및 겹침을 유지한다.",
+        "원본 음식의 색상, 질감, 반사광과 자연스러운 실내 역광을 유지한다.",
+        "음식 중심의 세로형 클로즈업 구도로 만들고 지원 출력 크기 중 원본에 가까운 1024x1536을 사용한다.",
+        "도시 배경은 음식의 장소 맥락이 약간 남는 정도만 허용하고 시선을 빼앗지 않게 한다.",
+        "출력은 PNG로 생성한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "원본 사진을 음식 중심의 세로형 클로즈업 구도로 편집한다. 화면 하단에 있는 검붉은 망고스틴 용기와 손질된 노란 과일 용기를 주요 피사체로 삼아 두 용기가 모두 완전하게 보이도록 프레이밍한다. 음식이 화면의 대부분을 차지하게 확대하고, 위쪽의 넓은 하늘과 도시 풍경, 오른쪽 의자 및 창틀은 대부분 프레임 밖으로 제외한다. 원본 음식의 개수, 형태, 색, 표면 질감, 용기 모양, 배치와 원래 조명을 그대로 유지한다. 새로운 음식이나 장식은 추가하지 말고, 단순한 크롭과 재프레이밍처럼 자연스럽게 보이게 한다.",
+      "use_case": "compositing"
+    }
+  ],
+  "execution_prompt": "음식 기준으로 클로즈업 되게 잘라줘"
 }

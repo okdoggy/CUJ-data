@@ -1,26 +1,57 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_9e3e93af10793af2",
-  "output_sha256": "352f75fe897d51899bb4e0a8437d74376f043e038c37665586d2108b3e27a4b4",
+  "request_id": "full_remaster_9e3e93af10793af2",
+  "output_sha256": "97c7e31902ff14a4f2a748c34f8818b0bd280f2ff3a0dfbdcbaa28e2be81e5da",
   "evidence": [
     {
-      "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "skill_id": "natural-subject-background-separation",
+      "version": "1.0.0"
     },
     {
-      "skill_id": "restrained-warm-cool-separation",
-      "version": "1.0.2"
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "romance",
-    "lut_intensity": 0.42,
-    "skin_protection": true,
-    "grain_amount": 0.06,
-    "halation": 0.04
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "얼굴 미화에 따른 이목구비 변경, 젊어 보이게 만들기 또는 표정 변경",
+        "플라스틱 같은 피부, 과도한 스무딩, 피부색의 주황색·회색 오염",
+        "과도한 HDR, 평평한 명암, 검정점 소실 또는 창문 하이라이트 클리핑",
+        "머리카락·안경·손가락·의복 경계의 halo, seam 또는 번짐",
+        "배경 교체, 물체 제거·추가, 실내 구조 변경 또는 요청하지 않은 장식",
+        "새로운 광원, 강한 렌즈 플레어, 글로우, 필름 그레인 또는 인위적 보케",
+        "과도한 선명화, 노이즈의 거친 증폭 또는 미세 디테일의 재창작",
+        "크롭, 줌, 카메라 시점 변경 또는 인물 위치 변경"
+      ],
+      "constraints": [
+        "두 인물의 정체성, 연령, 얼굴 구조와 표정을 정확히 보존한다.",
+        "안경, 머리카락, 손가락, 의복, 책과 기존 자세를 변경하지 않는다.",
+        "피부의 모공·주름·자연스러운 질감과 얼굴 입체감을 유지한다.",
+        "기존 창문에서 들어오는 광원의 방향과 실내 그림자 관계를 유지한다.",
+        "창문과 레이스 커튼의 형태 및 무늬를 보존하면서 밝기만 절제한다.",
+        "가구와 탁자 위 물건을 추가·삭제·이동하지 않는다.",
+        "원본의 1599:1064 가로 구도와 종횡비를 최대한 유지하고 크롭하거나 재구성하지 않는다.",
+        "출력은 PNG로 생성한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "Edit this existing family photograph conservatively and realistically. Preserve the exact identity, age, facial structure, expression, pose, gaze, eyeglasses, hair, hands, clothing, book, furniture, room, and candid family moment. Correct the strong window backlighting by gently lifting exposure on both people, especially their faces, hands, and upper bodies, while retaining natural facial contours and believable shadow direction. Recover natural-looking skin tones without smoothing away pores, wrinkles, or age-related texture. Slightly restrain the bright window and lace curtains so they remain luminous but draw less attention, while preserving their patterns and avoiding a gray or artificial HDR appearance. Keep the warm, intimate indoor atmosphere, realistic color, moderate contrast, and natural depth. Make the result look like a carefully restored version of the same photograph rather than a newly generated scene. Preserve the original 1599:1064 landscape composition and aspect ratio; use the nearest supported landscape output size and do not crop or reframe.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "사진 좀 예쁘게 만들어줘"
 }

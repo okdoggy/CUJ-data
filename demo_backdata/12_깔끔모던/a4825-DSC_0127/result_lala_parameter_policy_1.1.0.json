@@ -22,5 +22,6 @@
     "lut_intensity": 0.5,
     "grain_amount": 0.0,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "깔끔하고 모던하게 해줘"
 }

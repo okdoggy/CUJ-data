@@ -26,5 +26,6 @@
     "lut_intensity": 0.45,
     "grain_amount": 0.0,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "보정 좀 해줘. 근데 편집한 느낌 없이 자연스럽게"
 }

@@ -1,26 +1,67 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster → lut",
+  "tool_sequence": [
+    "remaster",
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_0eae90c5b7a3b86c",
-  "output_sha256": "eed2b4eac3a80b987eb0dd2bb8c5ae8d75dccc735c957367c547152017ca088f",
+  "request_id": "full_remaster_0eae90c5b7a3b86c",
+  "output_sha256": "7a9297f64bffa890a8bed3b283753904d466809d1ba04c0ef91adc58da664892",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "restrained-atmospheric-softness",
       "version": "1.0.0"
     }
   ],
-  "parameters": {
-    "preset": "film_noir",
-    "lut_intensity": 0.84,
-    "skin_protection": false,
-    "grain_amount": 0.28,
-    "halation": 0.02
-  }
+  "parameters": [
+    {
+      "brightness": -1,
+      "contrast": 3,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -4,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": -2,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": 0,
+      "tint": 0,
+      "vignette": 0
+    },
+    {
+      "grain_amount": 0.04,
+      "halation": 0.0,
+      "lut_intensity": 0.65,
+      "preset": "film_noir",
+      "skin_protection": false,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "느와르 영화의 한 장면처럼 만들어줘"
 }

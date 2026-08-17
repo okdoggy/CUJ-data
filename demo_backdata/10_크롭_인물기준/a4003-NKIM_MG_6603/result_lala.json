@@ -1,23 +1,53 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_gen_c5dae3610de12551",
-  "output_sha256": "389982c09c03f0b781d30ec7f51b7fa59ccee7ffc011a68ad4e905725b3a0981",
+  "request_id": "full_remaster_c5dae3610de12551",
+  "output_sha256": "ac7f89e0259ae64d25d14ba47d0c9db4d5d845aec48fd3a0a6839d4153e56af1",
   "evidence": [
-    {
-      "skill_id": "natural-skin-tone-and-texture-preservation",
-      "version": "1.0.0"
-    },
     {
       "skill_id": "semantic-mask-composition-and-edge-check",
       "version": "1.0.3"
+    },
+    {
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
     }
   ],
-  "parameters": {
-    "use_case": "identity-preserve",
-    "actual_size": "1536x1024"
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "얼굴을 새로 디자인하거나 다른 사람처럼 바꾸기",
+        "표정, 시선, 안경, 머리 모양 또는 체형 변경",
+        "인물 추가 또는 복제",
+        "의상 색상, 문양, 손이나 액세서리 변경",
+        "과도한 피부 스무딩, 미용 보정 또는 인공적인 선명화",
+        "손가락 왜곡, 얼굴 비대칭, 안경 변형 또는 경계 halo",
+        "루브르 배경을 다른 장소로 교체하기",
+        "왼쪽의 무관한 행인, 차량, 넓은 빈 바닥을 새 프레임에 유지하기",
+        "새로운 조명, 보케, 필름 효과, 텍스트 또는 장식 추가"
+      ],
+      "constraints": [
+        "두 인물 모두 프레임 안에 포함하고 얼굴을 주요 초점으로 유지한다.",
+        "두 사람의 정체성, 얼굴 구조, 표정, 안경과 헤어스타일을 최대한 원본대로 보존한다.",
+        "두 사람의 상대적 위치, 자세, 손 모양, 의상과 액세서리를 보존한다.",
+        "루브르 건축물과 유리 피라미드는 장소를 알아볼 수 있을 정도만 배경에 남긴다.",
+        "가로 구도와 원본에 가까운 종횡비를 유지하고 1536x1024 PNG로 출력한다.",
+        "원본의 조명, 색감, 피부 질감과 사실적인 사진 스타일을 유지한다.",
+        "요청하지 않은 인물 미화, 피부 보정, 색보정 또는 장면 변경을 하지 않는다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "Using the source photograph as the sole visual reference, create a tight landscape close-up centered on the two women standing together near the middle of the image. Reframe to show approximately their upper bodies or chest-up, with both faces clearly visible and naturally centered. Preserve each woman's identity, facial proportions, expression, gaze, glasses, hairstyle, pose, red and dark clothing, scarf, hands, and their relative positions exactly as closely as possible. Retain a recognizable but softly secondary portion of the Louvre courtyard and glass pyramid behind them. Exclude the unrelated man on the far left, vehicles, excessive sky, and the large empty foreground by placing them outside the new framing. This is a crop/reframing task only: keep the original lighting, color, photographic realism, and natural skin texture. Maintain a landscape composition and use the supported 1536x1024 output framing closest to the source aspect ratio.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "인물 얼굴 기준으로 클로즈업 되게 잘라줘"
 }

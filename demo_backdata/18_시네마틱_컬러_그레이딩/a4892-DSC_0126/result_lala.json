@@ -1,30 +1,67 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster → lut",
+  "tool_sequence": [
+    "remaster",
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_1bf7aecc319d7ec1",
-  "output_sha256": "e4e7adbd86f8f6263da7af0ea8e6ca7d15043acdc2b754245edf3b34a77a3fca",
+  "request_id": "full_remaster_1bf7aecc319d7ec1",
+  "output_sha256": "58a587381ed3a360ee0dda3e54265aaf6d74915d1e682e0a85b251232758a680",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
       "version": "1.0.1"
+    },
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "restrained-warm-cool-separation",
+      "version": "1.0.3"
     },
     {
       "skill_id": "restrained-atmospheric-softness",
       "version": "1.0.0"
-    },
-    {
-      "skill_id": "restrained-warm-cool-separation",
-      "version": "1.0.2"
     }
   ],
-  "parameters": {
-    "preset": "romance",
-    "lut_intensity": 0.58,
-    "skin_protection": true,
-    "grain_amount": 0.18,
-    "halation": 0.1
-  }
+  "parameters": [
+    {
+      "brightness": 1,
+      "contrast": 0,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -2,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": 2,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": 0,
+      "tint": 0,
+      "vignette": 0
+    },
+    {
+      "grain_amount": 0.05,
+      "halation": 0.04,
+      "lut_intensity": 0.52,
+      "preset": "teal_orange",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "코닥 계열 웜톤 필름 룩으로 시네마틱 그레이딩 해줘. 파인 그레인 살짝 얹고, 하이라이트엔 할레이션 약하게. 스킨톤 시프트는 잡아줘."
 }

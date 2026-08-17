@@ -22,5 +22,6 @@
     "lut_intensity": 0.5,
     "grain_amount": 0.0,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "사진 좀 예쁘게 만들어줘"
 }

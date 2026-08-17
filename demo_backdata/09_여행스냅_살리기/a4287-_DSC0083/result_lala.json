@@ -1,26 +1,63 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster → lut",
+  "tool_sequence": [
+    "remaster",
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_792bd2cb993de12a",
-  "output_sha256": "2d2dd5a91f0a1800d3bb31293d8399b69a7f4740c6ad69f89bbad294a6c9c553",
+  "request_id": "full_remaster_792bd2cb993de12a",
+  "output_sha256": "746bc0f51a10692ec0fd56d67c57fe253767f90c35652be9b2b678cb3988c33f",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "restrained-warm-cool-separation",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "fuji_velvia",
-    "lut_intensity": 0.58,
-    "skin_protection": true,
-    "grain_amount": 0.12,
-    "halation": 0.08
-  }
+  "parameters": [
+    {
+      "brightness": 2,
+      "contrast": 2,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -3,
+      "hsl_selective": [],
+      "saturation": 1,
+      "shadows": 3,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": -1,
+      "tint": 0,
+      "vignette": 0
+    },
+    {
+      "grain_amount": 0.0,
+      "halation": 0.0,
+      "lut_intensity": 0.5,
+      "preset": "teal_orange",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "여행 사진인데 밋밋해, 화사하고 시네마틱하게 살려줘"
 }

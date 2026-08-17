@@ -1,26 +1,34 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "lut",
+  "tool_sequence": [
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_8082e617fd2d57b5",
-  "output_sha256": "e2b98382a6dbed5391f1e1ad32081504c8aa7e2aa7dd1a0801d98d4462edc1ff",
+  "request_id": "full_remaster_8082e617fd2d57b5",
+  "output_sha256": "5c73d2fb368b692cd9e51ef702331e12cfb81a3ea8a0d42477f5a6135e261133",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ],
-  "parameters": {
-    "preset": "film_noir",
-    "lut_intensity": 0.9,
-    "skin_protection": false,
-    "grain_amount": 0.38,
-    "halation": 0.05
-  }
+  "parameters": [
+    {
+      "grain_amount": 0.0,
+      "halation": 0.0,
+      "lut_intensity": 0.62,
+      "preset": "film_noir",
+      "skin_protection": false,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "느와르 영화의 한 장면처럼 만들어줘"
 }

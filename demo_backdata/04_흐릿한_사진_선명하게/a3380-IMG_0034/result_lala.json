@@ -1,22 +1,42 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster",
+  "tool_sequence": [
+    "remaster"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_e55bc66e8d5d279a",
-  "output_sha256": "fcde4fdf181607c6f97365a2c1b8906c71bc772ce4baa515da108c8e7cf0c4cd",
+  "request_id": "full_remaster_e55bc66e8d5d279a",
+  "output_sha256": "2eac77f58d472232d8f514ebe427a8b3ef60b7e4ca565950da4481f353de8117",
   "evidence": [
     {
       "skill_id": "detail-preserving-denoise-and-edge-sharpen",
-      "version": "1.0.2"
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "clean_modern",
-    "lut_intensity": 0.35,
-    "skin_protection": true,
-    "grain_amount": 0.0,
-    "halation": 0.0
-  }
+  "parameters": [
+    {
+      "brightness": 0,
+      "contrast": 0,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": 0,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": 0,
+      "sharpen_amount": 0.0,
+      "sharpness": 3,
+      "temperature": 0,
+      "tint": 0,
+      "vignette": 0
+    }
+  ],
+  "execution_prompt": "사진이 흐려, 선명하게 해줘"
 }

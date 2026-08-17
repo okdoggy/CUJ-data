@@ -1,26 +1,53 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_627e959e3c416a85",
-  "output_sha256": "34f4af83b2a6573c71587494a50d037838d1642976ac93f58f7d2951608d1639",
+  "request_id": "full_remaster_627e959e3c416a85",
+  "output_sha256": "508d1795f3e38fda49c720beff1c396b58691e12d63075f5000f366d400f7d89",
   "evidence": [
     {
-      "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "skill_id": "natural-subject-background-separation",
+      "version": "1.0.0"
     },
     {
-      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "apple_neutral",
-    "lut_intensity": 0.18,
-    "skin_protection": false,
-    "grain_amount": 0.0,
-    "halation": 0.0
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "필터나 프리셋을 적용한 듯한 전역 색보정",
+        "과도한 채도 또는 비현실적인 음식색",
+        "전체 이미지의 노출 상승이나 그림자 개방",
+        "화이트 밸런스 변화 또는 따뜻한 색조 강화",
+        "새 음식이나 장식 추가, 기존 요소 제거",
+        "음식 형태·개수·아이싱 무늬·질감의 재설계",
+        "접시 경계의 번짐, halo, 색 누출",
+        "하이라이트 클리핑과 인위적인 광택",
+        "프레임 변경, 크롭, 시점 또는 구도 변경"
+      ],
+      "constraints": [
+        "편집 범위는 실제 음식 표면으로만 제한한다.",
+        "음식의 중간톤 밝기와 자연스러운 색 생동감만 아주 약하게 높인다.",
+        "아이싱과 윤기 있는 표면의 밝은 디테일이 날아가지 않게 보존한다.",
+        "음식의 종류·형태·개수·배치·재질과 접시 경계를 그대로 유지한다.",
+        "테이블과 식기, 유리잔, 장식물 및 배경의 밝기와 색은 변경하지 않는다.",
+        "전체 화이트 밸런스와 따뜻한 실내 조명, 명암 대비를 유지한다.",
+        "원본 구도와 세로 종횡비, 시점과 심도를 유지한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "Edit only the visible prepared foods: the glazed pastries on the central white platter, the yellow food on the green platter behind it, and the other served dishes containing food. Make the food look only slightly fresher and more appetizing by gently lifting its midtone brightness and restoring a small amount of natural color vibrancy and tonal definition. Keep the adjustment subtle and photorealistic, with no visible filter or stylized grade. Preserve the foods’ original hues, ingredients, shapes, quantities, arrangement, baked texture, icing texture, and existing highlights. Leave the wooden table, plates, glasses, cups, utensils, napkin, gift, background, shadows, lighting direction, overall exposure, white balance, contrast, color palette, composition, camera perspective, and depth of field unchanged. Preserve the original portrait composition and aspect ratio.",
+      "use_case": "precise-object-edit"
+    }
+  ],
+  "execution_prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘."
 }

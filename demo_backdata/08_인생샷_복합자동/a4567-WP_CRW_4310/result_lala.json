@@ -1,26 +1,59 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_8ff9d9ddb2a4db56",
-  "output_sha256": "d4fcfc0823b2d1c955c2db1d6552c50add2269a00fa1209fb8fffc4951a6df5f",
+  "request_id": "full_remaster_8ff9d9ddb2a4db56",
+  "output_sha256": "352c1af46dbd39cf09c450700705c56419b55dd9713827673d5cf1a4c63f3d36",
   "evidence": [
     {
-      "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "skill_id": "natural-subject-background-separation",
+      "version": "1.0.0"
     },
     {
-      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "skill_id": "natural-skin-tone-and-texture-preservation",
       "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "clean_modern",
-    "lut_intensity": 0.58,
-    "skin_protection": true,
-    "grain_amount": 0.08,
-    "halation": 0.06
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "사람이나 물체를 새로 추가하거나 기존 인물을 제거하지 않는다.",
+        "얼굴 미화로 이목구비, 치아, 눈, 머리카락 또는 표정을 재설계하지 않는다.",
+        "피부를 플라스틱처럼 평활화하거나 눈 흰자를 과도하게 밝히지 않는다.",
+        "배경을 인위적인 스튜디오나 다른 장소로 교체하지 않는다.",
+        "가짜 렌즈 플레어, 강한 글로우, 과도한 보케 또는 비현실적인 햇빛을 추가하지 않는다.",
+        "과도한 HDR, 채도, 선명화, 노이즈 제거, 색 분할 또는 무거운 비네팅을 적용하지 않는다.",
+        "피사체 경계에 halo, 색 번짐, 잘린 머리카락이나 오려 붙인 듯한 흔적을 만들지 않는다.",
+        "도로의 선, 나무, 기둥, 건물과 수평선을 왜곡하지 않는다.",
+        "사진을 크롭하거나 세 사람의 발과 그림자를 잘라내지 않는다."
+      ],
+      "constraints": [
+        "원본과 동일한 약 3:2 가로 구도와 종횡비를 유지한다.",
+        "세 사람 모두의 얼굴, 표정, 정체성, 연령대와 신체 비율을 변경하지 않는다.",
+        "아이를 포함한 세 사람의 손가락과 맞잡은 손의 구조를 정확히 보존한다.",
+        "세 사람의 위치, 걷는 자세, 시선과 자연스러운 상호작용을 유지한다.",
+        "의상, 안경, 장갑, 신발, 가방과 기존 색상 및 패턴을 유지한다.",
+        "주차장과 겨울 공원이라는 실제 장소의 맥락 및 기존 광원 방향을 유지한다.",
+        "피부의 모공과 자연 질감을 남기고 얼굴 구조를 보존한다.",
+        "눈과 밝은 배경의 하이라이트 디테일 및 검은 외투의 암부 깊이를 함께 보존한다.",
+        "최종 출력은 PNG로 만든다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "원본 사진을 자연스럽고 따뜻한 가족 인생샷처럼 정교하게 보정한다. 가운데 아이와 양옆 두 성인의 얼굴, 표정, 나이, 체형, 머리 모양, 안경, 피부 특징과 정체성을 정확히 유지한다. 세 사람이 손을 잡고 걸어오는 자세와 순간, 의상과 소지품을 그대로 보존한다. 역광 때문에 어두워진 세 사람의 얼굴과 상체를 기존 햇빛 방향에 맞춰 부드럽게 밝히고, 특히 왼쪽 인물의 얼굴과 검은 외투에서 자연스러운 디테일을 회복한다. 얼굴의 거친 명암만 완화하되 피부색과 실제 피부 질감을 유지하고 플라스틱처럼 매끈하게 만들지 않는다. 아이의 분홍색 외투와 세 사람의 겨울 의상 색은 자연스럽고 생기 있게 정돈하되 과포화하지 않는다. 배경의 주차장, 연못, 나무, 잔설이라는 겨울 공원 환경은 유지하면서 배경의 밝기와 시각적 존재감만 미세하게 절제해 세 사람이 자연스럽게 중심이 되도록 한다. 눈더미와 밝은 하늘의 디테일을 보존하고 암부를 회색으로 뜨게 만들지 않는다. 머리카락, 장갑, 손, 의상 가장자리에는 halo나 오려 붙인 듯한 경계가 없도록 한다. 원본의 사실적인 사진 질감과 자연광을 유지하고, 과도한 영화 효과 없이 따뜻하고 선명하며 균형 잡힌 완성 사진으로 만든다.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "이 사진 인생샷으로 만들어줘"
 }

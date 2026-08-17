@@ -1,11 +1,15 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_gen_b17cf89c2b05bb39",
-  "output_sha256": "27769f8dca0deda80797cb781626d7d3ec99f9ee061b8481ceded92131a7e638",
+  "request_id": "full_remaster_b17cf89c2b05bb39",
+  "output_sha256": "e12792d457e9f90756559fae561b2ab737b461d685078642367aafa9e5b929fa",
   "evidence": [
     {
       "skill_id": "natural-skin-tone-and-texture-preservation",
@@ -16,8 +20,36 @@
       "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "use_case": "identity-preserve",
-    "actual_size": "1024x1536"
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "플라스틱 피부, 뷰티 필터 또는 에어브러시처럼 보이는 평활화",
+        "모공과 잔주름 제거 또는 피부 질감의 생성·복제",
+        "전역 블러, 강한 노이즈 제거, 선명화 또는 광택 추가",
+        "얼굴 윤곽 성형, 눈 확대, 코·입·턱 변경",
+        "주근깨·점·고유 특징의 무차별 제거",
+        "피부색의 과도한 균일화, 밝기 상승 또는 색조 변경",
+        "모자 그림자와 햇빛 무늬 제거, 재조명 또는 대비 평탄화",
+        "안경 렌즈·테·반사, 치아 또는 눈 흰자의 보정",
+        "메이크업 추가, 배경 변경, 크롭 또는 새로운 요소 생성"
+      ],
+      "constraints": [
+        "편집 범위는 얼굴의 실제 피부 영역으로만 제한한다.",
+        "모공, 잔주름, 솜털과 자연스러운 피부 미세 질감을 보존한다.",
+        "일시적인 작은 블레미시와 저주파 톤 얼룩만 절제해 완화한다.",
+        "얼굴 형태, 이목구비, 표정, 나이와 인물 정체성을 그대로 유지한다.",
+        "모자 구멍을 통과한 점광과 기존 직사광·그림자 경계를 유지한다.",
+        "눈, 눈썹, 속눈썹, 안경, 입술, 치아, 머리카락과 얼굴 윤곽은 변경하지 않는다.",
+        "목의 점을 포함한 고유한 특징은 제거하지 않는다.",
+        "배경, 모자, 의상, 액세서리와 전체 색감·노출은 변경하지 않는다.",
+        "원본 구도와 세로 종횡비를 유지하고 가장 가까운 지원 크기인 1024x1536으로 출력한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "Perform a very subtle, natural portrait skin retouch restricted only to the visible facial skin. Emulate a conservative frequency-separation result: preserve the high-frequency layer exactly in appearance, including natural pores, fine skin texture, tiny lines, and realistic micro-contrast. On the low-frequency appearance only, gently reduce temporary blemishes and small patchy tone or color irregularities so the complexion looks naturally consistent, not perfected. Keep the existing directional sunlight, dappled hat shadows, highlights, facial modeling, and natural tonal transitions intact. Preserve the subject's identity, facial geometry, expression, age, skin color, glasses, eyes, eyebrows, eyelashes, lips, teeth, hair, hat, clothing, necklace, mole on the neck, background, framing, and original portrait aspect ratio. Make the edit visually undetectable at normal viewing size and retain authentic skin texture at close view.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "주파수 분리로 피부 리터치 해줘. 하이 프리퀀시(모공·피부 결)는 그대로 보존하고, 로우 프리퀀시에서 블레미시와 톤 얼룩만 정리. 오버스무딩 티 안 나게."
 }

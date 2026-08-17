@@ -26,5 +26,6 @@
     "lut_intensity": 0.55,
     "grain_amount": 0.04,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "인스타 감성 매트 필름 느낌으로 해줘"
 }

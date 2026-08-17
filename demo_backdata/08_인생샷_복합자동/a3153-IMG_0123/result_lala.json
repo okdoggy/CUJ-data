@@ -1,26 +1,58 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_74c87db621ce7241",
-  "output_sha256": "972a365d9fe235ece14191a02a8506830284f9c9931f7956c2f782e2494e69c5",
+  "request_id": "full_remaster_74c87db621ce7241",
+  "output_sha256": "331d6288c2a9c3431f08fedce63655e3964f28bcc9c141bf0658a6012d96a0c5",
   "evidence": [
     {
-      "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "skill_id": "natural-subject-background-separation",
+      "version": "1.0.0"
     },
     {
-      "skill_id": "restrained-warm-cool-separation",
-      "version": "1.0.2"
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "romance",
-    "lut_intensity": 0.58,
-    "skin_protection": true,
-    "grain_amount": 0.08,
-    "halation": 0.06
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "얼굴 재설계, 미용 성형, 과도한 눈 확대 또는 체형 변경",
+        "플라스틱 피부, 모공 완전 제거, 과도한 피부 미백",
+        "드레스의 형태·소재·장식 변경 또는 흰색 하이라이트 클리핑",
+        "손가락 변형, 손 추가, 부케의 꽃 종류나 개수 재구성",
+        "가짜 석양, 강한 렌즈 플레어, 비현실적인 역광 또는 스튜디오 조명",
+        "배경 전체 교체, 계절 변경, 새로운 건물·사람·장식 추가",
+        "강한 배경 흐림, 인공적인 보케, 피사체 경계의 halo와 잘라 붙인 듯한 효과",
+        "과도한 HDR, 오렌지 피부, 청록색 그림자, 높은 채도, 강한 샤프닝",
+        "원본과 다른 크롭, 카메라 시점 변경 또는 드레스 밑단 절단"
+      ],
+      "constraints": [
+        "원본 인물의 얼굴 정체성, 나이대, 표정과 신체 비율을 변경하지 않는다.",
+        "신부의 자세, 시선, 손 위치, 드레스 디자인과 부케 구성을 변경하지 않는다.",
+        "원본의 세로 구도와 약 2:3 종횡비를 유지하고 피사체 및 드레스가 잘리지 않게 한다.",
+        "출력은 입력 종횡비에 가장 가까운 1024x1536 세로 PNG 구성을 전제로 한다.",
+        "공원, 산책로, 나무와 강변이라는 실제 장소의 구조와 흐린 날의 자연스러운 조명 방향을 유지한다.",
+        "피부와 배경을 독립적으로 조정하고 얼굴·머리카락·팔·드레스 경계를 자연스럽게 유지한다.",
+        "드레스의 흰색 하이라이트, 주름, 새틴 질감과 부케의 실제 색상 디테일을 보존한다.",
+        "배경 정리는 멀리 있는 행인과 작은 표지판 등 사소한 방해 요소에만 제한한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "원본 웨딩 인물 사진을 자연스럽고 고급스러운 인생샷으로 정밀 보정한다. 신부의 얼굴 정체성, 표정, 시선, 헤어스타일과 헤어 장식, 체형, 자세, 손과 손가락, 흰색 드레스의 디자인·봉제선·주름·새틴 질감, 부케의 형태와 실제 꽃 색을 그대로 보존한다. 흐린 날의 자연광과 원래 장면을 유지하면서 신부의 얼굴과 상체 중간톤을 부드럽게 회복하고, 피부는 건강하고 자연스러운 색으로 정돈하되 모공과 실제 질감을 남긴다. 흰 드레스는 순백색의 디테일과 입체적인 주름을 유지하고 밝은 부분이 날아가지 않게 한다. 배경은 같은 공원과 강변 환경을 유지하되 신부보다 약간 차분하고 어둡게 정리하여 자연스러운 피사체 분리를 만든다. 배경의 멀리 있는 행인과 작은 표지판처럼 시선을 끄는 사소한 방해 요소만 주변 환경과 자연스럽게 이어지도록 제거한다. 색감은 과장되지 않은 따뜻하고 깨끗한 웨딩 사진 톤으로 만들고, 전체 대비와 선명도는 부드럽고 현실적인 수준으로 유지한다. 머리카락, 어깨, 팔, 드레스, 부케 가장자리에는 정교하고 자연스러운 전이를 유지하여 오려 붙인 듯한 경계나 halo가 생기지 않게 한다.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "이 사진 인생샷으로 만들어줘"
 }

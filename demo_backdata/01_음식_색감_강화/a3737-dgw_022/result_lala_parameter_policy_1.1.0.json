@@ -17,5 +17,6 @@
       "version": "1.0.3"
     }
   ],
-  "parameters": {}
+  "parameters": {},
+  "execution_prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘."
 }

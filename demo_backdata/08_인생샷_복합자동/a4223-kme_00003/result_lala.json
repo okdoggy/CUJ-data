@@ -1,30 +1,63 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_4969bf5740723c2e",
-  "output_sha256": "1e902506fa3aedd124706ed2f6bb6bcd2c157fc344753e5dcaedc1369281860c",
+  "request_id": "full_remaster_4969bf5740723c2e",
+  "output_sha256": "4e2df3ac1a3fdb7024ded720226bd1c51e45d8a351e53d3a6cc85e7899376bbd",
   "evidence": [
     {
-      "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
-    },
-    {
-      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "skill_id": "natural-subject-background-separation",
       "version": "1.0.0"
     },
     {
-      "skill_id": "restrained-warm-cool-separation",
-      "version": "1.0.2"
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "clean_modern",
-    "lut_intensity": 0.52,
-    "skin_protection": true,
-    "grain_amount": 0.06,
-    "halation": 0.04
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "얼굴 재설계, 미화로 인한 정체성 변화, 나이 변화",
+        "새로운 미소나 눈 모양 생성, 시선 변경",
+        "플라스틱 피부, 과도한 피부 스무딩, 인위적인 눈 흰자 보정",
+        "손가락 추가·삭제·융합 또는 팔과 다리의 해부학적 왜곡",
+        "과도한 HDR, 평평한 명암, 검정점 소실",
+        "강한 주황색·청록색 영화 그레이드 또는 과포화",
+        "가짜 렌즈 플레어, 인공 역광, 광원 방향과 모순되는 조명",
+        "피사체 경계의 헤일로, 색 번짐, 오려 붙인 듯한 경계",
+        "배경 교체, 객체 추가, 요청하지 않은 의상이나 액세서리 변경",
+        "과도한 블러, 가짜 보케, 세부 질감의 소실",
+        "크롭 확대나 구도 재배치",
+        "텍스트, 로고, 워터마크 추가"
+      ],
+      "constraints": [
+        "아버지와 아기의 얼굴 정체성, 나이, 표정과 시선 방향을 변경하지 않는다.",
+        "아기의 얼굴 특징과 머리 장식, 아버지의 선글라스와 헤어스타일을 그대로 유지한다.",
+        "두 사람의 자세, 신체 비율, 손의 위치와 가족 간 상호작용을 유지한다.",
+        "원본의 세로 구도와 약 2:3 종횡비, 프레이밍 및 카메라 시점을 유지한다.",
+        "기존 햇빛의 방향과 야외 장소의 현실성을 유지한다.",
+        "피부의 자연스러운 질감과 얼굴 입체감을 보존한다.",
+        "분홍색 의상, 갈색 바지, 신발과 의자의 형태 및 재질을 유지한다.",
+        "배경 건물, 청록색 창틀과 나뭇가지를 재설계하거나 다른 장소로 바꾸지 않는다.",
+        "밝은 창 반사의 하이라이트 디테일을 가능한 범위에서 보존한다.",
+        "출력은 PNG로 생성한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "원본 가족사진을 자연스럽고 고급스러운 인생샷 느낌으로 보정한다. 아버지와 아기의 얼굴 정체성, 실제 얼굴형, 표정, 선글라스, 머리카락, 피부 특징, 체형, 손과 손가락, 자세와 상호작용을 정확히 유지한다. 강한 측면 직사광으로 생긴 얼굴과 몸의 거친 명암을 자연스럽게 완화하고, 특히 아기의 얼굴과 아버지의 선글라스 아래 얼굴이 잘 읽히도록 피사체 중간톤과 그림자를 절제해 회복한다. 햇빛의 기존 방향과 야외 분위기는 유지하며 완전히 평면적인 조명으로 만들지 않는다. 피부색은 건강하고 자연스럽게 정돈하되 모공과 실제 질감을 남기고, 아기 피부와 성인 피부를 과도하게 매끈하게 만들지 않는다. 분홍색 의상과 피부색이 서로 오염되지 않도록 하고 원래 의상 색과 재질을 유지한다. 배경의 청록색 창틀과 건물, 나뭇가지는 원래 장소로 유지하되 피사체보다 시선이 덜 가도록 밝기와 대비를 미세하게 절제한다. 머리카락, 어깨, 팔, 아기 옷과 배경의 복잡한 경계를 자연스럽게 유지하고 헤일로나 오려 붙인 듯한 흔적을 만들지 않는다. 전체 색감은 깨끗하고 따뜻한 자연광 가족사진으로 마무리하되 과장된 필터 느낌 없이 현실적인 사진으로 유지한다. 원본의 세로 구도, 프레이밍, 카메라 시점과 종횡비를 유지하고 가장 가까운 지원 세로 출력 크기로 렌더링한다.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "이 사진 인생샷으로 만들어줘"
 }

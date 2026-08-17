@@ -23,6 +23,33 @@ def load_module():
 
 
 class LalaEvaluationExportTests(unittest.TestCase):
+    def test_execution_prompt_redacts_credential_pattern(self) -> None:
+        module = load_module()
+
+        redacted = module._redact_execution_prompt("token: sk-abcdefghijklmnop 사진을 보정해줘")
+
+        self.assertEqual(redacted, "[REDACTED] 사진을 보정해줘")
+
+    def test_backfill_adds_execution_prompt_to_existing_lala_metadata(self) -> None:
+        module = load_module()
+        with tempfile.TemporaryDirectory() as raw_temp:
+            root = Path(raw_temp)
+            case = root / "demo_backdata" / "01_example" / "image-a"
+            case.mkdir(parents=True)
+            (case / "result.json").write_text(
+                json.dumps({"turn": {"prompt": "색은 유지하고 명암만 보정해줘"}}),
+                encoding="utf-8",
+            )
+            (case / "result_lala.json").write_text(
+                json.dumps({"tool": "lut", "parameters": {}}), encoding="utf-8"
+            )
+
+            updated = module.backfill_execution_prompts(root)
+
+            self.assertEqual(updated, 1)
+            metadata = json.loads((case / "result_lala.json").read_text(encoding="utf-8"))
+            self.assertEqual(metadata["execution_prompt"], "색은 유지하고 명암만 보정해줘")
+
     def test_export_parameter_policy_rerun_preserves_existing_result(self) -> None:
         module = load_module()
         with tempfile.TemporaryDirectory() as raw_temp:
@@ -31,6 +58,10 @@ class LalaEvaluationExportTests(unittest.TestCase):
             case = root / "demo_backdata" / relative_path
             case.mkdir(parents=True)
             (case / "lala.jpg").write_bytes(b"existing-result")
+            (case / "result.json").write_text(
+                json.dumps({"turn": {"prompt": "피사체를 유지하며 대비를 정리해줘"}}),
+                encoding="utf-8",
+            )
             rerun = root / "rerun"
             (rerun / "results").mkdir(parents=True)
             case_id = hashlib.sha256(relative_path.encode("utf-8")).hexdigest()[:16]
@@ -71,15 +102,19 @@ class LalaEvaluationExportTests(unittest.TestCase):
                 (case / "result_lala_parameter_policy_1.1.0.json").read_text(encoding="utf-8")
             )
             self.assertEqual(metadata["calibration_version"], "1.1.0")
-            self.assertNotIn("prompt", json.dumps(metadata))
+            self.assertEqual(metadata["execution_prompt"], "피사체를 유지하며 대비를 정리해줘")
 
-    def test_export_places_named_result_and_excludes_prompt(self) -> None:
+    def test_export_copies_case_execution_prompt_into_result_metadata(self) -> None:
         module = load_module()
         with tempfile.TemporaryDirectory() as raw_temp:
             root = Path(raw_temp)
             case = root / "demo_backdata" / "01_example" / "image-a"
             case.mkdir(parents=True)
             (case / "before.jpg").write_bytes(b"before")
+            (case / "result.json").write_text(
+                json.dumps({"turn": {"prompt": "창문 빛은 유지하고 사진을 또렷하게 해줘"}}),
+                encoding="utf-8",
+            )
             artifacts = root / "evaluations" / "lala-artifacts"
             (artifacts / "lut-results").mkdir(parents=True)
             Image.new("RGB", (2, 2), "red").save(
@@ -126,9 +161,9 @@ class LalaEvaluationExportTests(unittest.TestCase):
             metadata = json.loads((case / "result_lala.json").read_text(encoding="utf-8"))
             self.assertEqual(metadata["tool"], "lut")
             self.assertEqual(metadata["result_file"], "lala.jpg")
-            self.assertNotIn("prompt", json.dumps(metadata))
+            self.assertEqual(metadata["execution_prompt"], "창문 빛은 유지하고 사진을 또렷하게 해줘")
 
-    def test_build_html_references_case_lala_image(self) -> None:
+    def test_build_html_shows_only_latest_lala_and_escaped_execution_prompt(self) -> None:
         module = load_module()
         with tempfile.TemporaryDirectory() as raw_temp:
             root = Path(raw_temp)
@@ -137,7 +172,14 @@ class LalaEvaluationExportTests(unittest.TestCase):
             for filename in ("before.jpg", "after.jpg", "lala.jpg", "lala_parameter_policy_1.1.0.jpg"):
                 (case / filename).write_bytes(b"image")
             (case / "result_lala.json").write_text(
-                json.dumps({"tool": "lut", "parameters": {"preset": "clean_modern"}}),
+                json.dumps(
+                    {
+                        "tool": "lut",
+                        "calibration_version": "1.2.0",
+                        "parameters": {"preset": "clean_modern"},
+                        "execution_prompt": "밝게 <자연스럽게> 보정해줘",
+                    }
+                ),
                 encoding="utf-8",
             )
             (case / "evaluation_lala.json").write_text(
@@ -145,7 +187,14 @@ class LalaEvaluationExportTests(unittest.TestCase):
                 encoding="utf-8",
             )
             (case / "result_lala_parameter_policy_1.1.0.json").write_text(
-                json.dumps({"tool": "lut", "parameters": {"preset": "clean_modern"}}),
+                json.dumps(
+                    {
+                        "tool": "lut",
+                        "parameters": {"preset": "clean_modern"},
+                        "calibration_version": "1.1.0",
+                        "result_file": "lala_parameter_policy_1.1.0.jpg",
+                    }
+                ),
                 encoding="utf-8",
             )
             manifest = {
@@ -167,11 +216,15 @@ class LalaEvaluationExportTests(unittest.TestCase):
 
             html = output.read_text(encoding="utf-8")
             self.assertIn("LALA", html)
-            self.assertIn("demo_backdata/01_example/image-a/lala.jpg", html)
-            self.assertIn("LALA 1.1.0", html)
-            self.assertIn(
+            self.assertIn("demo_backdata/01_example/image-a/lala.jpg\"", html)
+            self.assertNotIn(
                 "demo_backdata/01_example/image-a/lala_parameter_policy_1.1.0.jpg", html
             )
+            self.assertNotIn("LALA 1.1.0", html)
+            self.assertIn("실행 prompt", html)
+            self.assertIn("사용 parameter", html)
+            self.assertIn("밝게 &lt;자연스럽게&gt; 보정해줘", html)
+            self.assertIn("grid-template-columns:repeat(5,minmax(0,1fr))", html)
             self.assertIn("직접 시각 검토: 변화가 약함", html)
 
 

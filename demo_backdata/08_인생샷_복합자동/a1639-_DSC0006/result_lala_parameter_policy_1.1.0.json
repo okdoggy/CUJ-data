@@ -30,5 +30,6 @@
     "lut_intensity": 0.52,
     "grain_amount": 0.0,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "이 사진 인생샷으로 만들어줘"
 }

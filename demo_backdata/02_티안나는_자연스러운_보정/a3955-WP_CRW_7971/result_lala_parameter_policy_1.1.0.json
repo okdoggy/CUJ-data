@@ -21,5 +21,6 @@
       "version": "1.0.3"
     }
   ],
-  "parameters": {}
+  "parameters": {},
+  "execution_prompt": "보정 좀 해줘. 근데 편집한 느낌 없이 자연스럽게"
 }

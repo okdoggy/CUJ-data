@@ -1,22 +1,51 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_853f09b05c28fbfa",
-  "output_sha256": "11f547d34702d97edbbd899f51859e658d2a0e802b22787968e36762861c16f0",
+  "request_id": "full_remaster_853f09b05c28fbfa",
+  "output_sha256": "e7909a42ee26c6e812ecb997ca3c79c59f9f11ec60dc6b3ad7dfd859da4f4e43",
   "evidence": [
     {
-      "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "skill_id": "protected-local-color-change",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "clean_modern",
-    "lut_intensity": 0.14,
-    "skin_protection": false,
-    "grain_amount": 0.0,
-    "halation": 0.0
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "필터처럼 보이는 전역 색조 변화",
+        "과포화된 빨강·노랑·주황색",
+        "음식만 인공적으로 빛나거나 밝아지는 효과",
+        "새로운 윤기·소스·증기·연기·불꽃 추가",
+        "그릴 테두리와 배경의 붉은색·녹색 변화",
+        "질감 평활화, 과도한 선명화, 경계 번짐이나 halo",
+        "음식의 형태·배치·익은 정도 재해석",
+        "크롭, 확대, 구도 또는 종횡비 변경"
+      ],
+      "constraints": [
+        "연어·옥수수·토마토 영역에만 최소 강도의 색 생동감 보정을 적용할 것",
+        "음식의 원래 색상 관계와 자연스러운 익은 질감을 보존할 것",
+        "전체 노출·대비·화이트 밸런스·검정점과 하이라이트를 유지할 것",
+        "화로·석쇠·숯·배경과 음식 경계가 변하지 않도록 보호할 것",
+        "원본 구도와 약 3:2 종횡비를 유지하고 지원 크기 중 1536x1024로 출력할 것",
+        "모든 객체의 위치·형태·개수와 카메라 시점을 그대로 유지할 것"
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "사진 속 그릴 위 음식만 매우 미세하고 자연스럽게 색을 살려 주세요. 연어의 기존 자연스러운 주황빛, 옥수수의 노란빛, 토마토의 붉은빛이 현재보다 약간 더 신선하고 생기 있게 보이도록 채도와 색 분리를 소폭 높이되, 필터나 강한 색보정이 전혀 느껴지지 않게 하세요. 음식의 실제 조명, 밝기, 하이라이트, 그림자, 익은 정도, 표면 수분감과 질감은 그대로 유지하세요. 음식 이외의 화로, 석쇠, 숯, 금속, 녹슨 붉은 테두리, 녹색 배경은 변경하지 마세요. 원본의 전체 노출, 대비, 화이트 밸런스, 따뜻한 색조와 어두운 배경 분위기를 정확히 유지하세요.",
+      "use_case": "precise-object-edit"
+    }
+  ],
+  "execution_prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘."
 }

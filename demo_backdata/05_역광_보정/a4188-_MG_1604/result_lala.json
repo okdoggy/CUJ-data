@@ -1,26 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster",
+  "tool_sequence": [
+    "remaster"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_555e9d955be1bce4",
-  "output_sha256": "695f18bec6fc383feaa832c5ac59a15a097174316b3523854cada5dda8a49140",
+  "request_id": "full_remaster_555e9d955be1bce4",
+  "output_sha256": "39862d30def6171ad790da3e7e64c0789801d960040907680b28692b62aceb96",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ],
-  "parameters": {
-    "preset": "clean_modern",
-    "lut_intensity": 0.72,
-    "skin_protection": true,
-    "grain_amount": 0.08,
-    "halation": 0.03
-  }
+  "parameters": [
+    {
+      "brightness": 18,
+      "contrast": 4,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -18,
+      "hsl_selective": [],
+      "saturation": 6,
+      "shadows": 28,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": 2,
+      "tint": 0,
+      "vignette": 0
+    }
+  ],
+  "execution_prompt": "역광 사진이라 전체적으로 어두워, 사진 전체를 밝고 화사하게 살려줘"
 }

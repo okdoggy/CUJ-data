@@ -1,11 +1,15 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_gen_0340a41e8e937cc3",
-  "output_sha256": "78e5eaa11275692afc3b05ff492aeb57046c2b78561ad24323e65c755dfc1db8",
+  "request_id": "full_remaster_0340a41e8e937cc3",
+  "output_sha256": "cf2b7c1800af9d861161dc49ff04f476a993aff8a6675549f12b4536168f7f45",
   "evidence": [
     {
       "skill_id": "protected-local-color-change",
@@ -14,14 +18,35 @@
     {
       "skill_id": "semantic-mask-composition-and-edge-check",
       "version": "1.0.3"
-    },
-    {
-      "skill_id": "natural-subject-background-separation",
-      "version": "1.0.0"
     }
   ],
-  "parameters": {
-    "use_case": "precise-object-edit",
-    "actual_size": "1536x1024"
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "전역 필터 또는 영화적 색보정",
+        "과도한 채도와 비현실적인 음식색",
+        "음식의 광택이나 하이라이트를 인위적으로 추가하는 것",
+        "새로운 음식이나 장식 추가",
+        "물체 제거, 이동, 변형 또는 재구성",
+        "배경 밝기 상승이나 하늘 색 변화",
+        "과도한 선명화, HDR 효과, 헤일로와 경계 번짐",
+        "종이와 테이블까지 음식색에 물드는 현상"
+      ],
+      "constraints": [
+        "지원되는 입력 이미지 비율에 가장 가까운 가로형 1K 출력 크기를 사용하고 원본 구도와 종횡비를 유지한다.",
+        "치즈, 햄, 빵 영역에만 보정을 제한한다.",
+        "풍경, 하늘, 바다, 마을, 식생, 난간, 테이블, 종이, 병, 물병, 잔과 기타 소품의 색과 밝기를 변경하지 않는다.",
+        "사진 전체의 노출, 대비, 검정점, 화이트 밸런스와 색조를 유지한다.",
+        "음식의 형태, 위치, 수량, 크기, 배열과 포장지를 그대로 유지한다.",
+        "기존 흐린 자연광과 전경의 그늘 방향을 유지한다.",
+        "색과 밝기 변화는 전후 비교에서 겨우 느껴지는 정도로 제한한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "전경 원형 테이블 위의 음식인 치즈, 얇게 썬 햄, 빵만 선택적으로 아주 미세하게 보정한다. 그늘 때문에 칙칙해진 음식의 중간톤을 조금 열고 자연스러운 고유 색과 신선한 질감을 살짝 회복하되, 필터나 스타일 그레이딩처럼 보이지 않게 한다. 햄의 자연스러운 옅은 분홍색, 치즈의 크림색과 푸른 결, 빵의 담백한 황갈색을 현실적인 범위에서만 약하게 선명하게 한다. 음식의 하이라이트와 그림자, 표면 질감, 기존 조명 방향을 유지한다. 원본 구도와 종횡비를 유지하고 음식 이외의 모든 영역은 원본과 동일하게 보존한다.",
+      "use_case": "precise-object-edit"
+    }
+  ],
+  "execution_prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘."
 }

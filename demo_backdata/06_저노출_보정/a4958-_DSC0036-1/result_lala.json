@@ -1,26 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster",
+  "tool_sequence": [
+    "remaster"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_01d12ab9db9f9fa0",
-  "output_sha256": "037ed185dd76a06dd2bb1db80b0f9010147d03b2f43b6b1db4385dd6aef3d05f",
+  "request_id": "full_remaster_01d12ab9db9f9fa0",
+  "output_sha256": "99389f60954cb42664f62215658f5e49e628f1b15d34bba285f2b812a68ce3b7",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ],
-  "parameters": {
-    "preset": "summer_pastel",
-    "lut_intensity": 0.78,
-    "skin_protection": true,
-    "grain_amount": 0.03,
-    "halation": 0.02
-  }
+  "parameters": [
+    {
+      "brightness": 30,
+      "contrast": 2,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -22,
+      "hsl_selective": [],
+      "saturation": 3,
+      "shadows": 24,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": 1,
+      "tint": 0,
+      "vignette": 0
+    }
+  ],
+  "execution_prompt": "너무 어둡게 나왔어, 밝고 화사하게 살려줘"
 }

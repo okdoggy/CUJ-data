@@ -1,26 +1,63 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster → lut",
+  "tool_sequence": [
+    "remaster",
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_b76eeafc1030fe1a",
-  "output_sha256": "5f9d4e6de57c299b3e002b8f658f1ef7368293a0f78b76ca067f4f774f766a8e",
+  "request_id": "full_remaster_b76eeafc1030fe1a",
+  "output_sha256": "f1447a5a060cbd60f89922a044d5e1c4402394568dfb36578a25f725b88649d0",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.1"
     }
   ],
-  "parameters": {
-    "preset": "moody_dark",
-    "lut_intensity": 0.7,
-    "skin_protection": true,
-    "grain_amount": 0.18,
-    "halation": 0.06
-  }
+  "parameters": [
+    {
+      "brightness": 0,
+      "contrast": 1,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -4,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": 0,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": 0,
+      "tint": 0,
+      "vignette": 0
+    },
+    {
+      "grain_amount": 0.0,
+      "halation": 0.0,
+      "lut_intensity": 0.55,
+      "preset": "moody_dark",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "어둡고 무게감 있는 무드로 만들어줘"
 }

@@ -21,5 +21,6 @@
       "version": "1.0.3"
     }
   ],
-  "parameters": {}
+  "parameters": {},
+  "execution_prompt": "이 사진 인생샷으로 만들어줘"
 }

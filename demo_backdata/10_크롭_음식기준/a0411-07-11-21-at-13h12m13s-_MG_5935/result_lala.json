@@ -1,19 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_gen_a4df5036c672b9e8",
-  "output_sha256": "1d01ea4fd7b1fb4e8e8a7f64baa3ba86db3788888c55d0e4af9466d4ee8cae4a",
+  "request_id": "full_remaster_a4df5036c672b9e8",
+  "output_sha256": "961f614d84fdd29c8a386239d592c3220437ea0983689cc6fa9fcda35851d2b8",
   "evidence": [
     {
       "skill_id": "semantic-mask-composition-and-edge-check",
       "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "use_case": "precise-object-edit",
-    "actual_size": "1536x1024"
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "새 음식이나 식기, 장식, 사람을 추가하지 않는다.",
+        "기존 음식이나 병, 잔을 제거하거나 복제하지 않는다.",
+        "병 라벨이나 포장 문구를 새로 만들거나 임의로 변경하지 않는다.",
+        "음식이 프레임 가장자리에서 부자연스럽게 잘리지 않게 한다.",
+        "테이블이나 난간의 기하 구조를 휘게 만들지 않는다.",
+        "색감 스타일링, 과도한 밝기 보정, 배경 흐림 또는 인공적인 보케를 추가하지 않는다.",
+        "해안 풍경을 주 피사체처럼 넓게 남기지 않는다."
+      ],
+      "constraints": [
+        "원본 종횡비에 가장 가까운 1536x1024 가로형 구도를 사용한다.",
+        "치즈, 햄, 빵류가 프레임의 핵심이 되도록 테이블을 중심으로 타이트하게 재구성한다.",
+        "음식의 실제 종류, 형태, 개수, 배치와 질감을 유지한다.",
+        "와인병, 물병, 잔, 접시 및 테이블 위 소품의 상대적 위치와 원근을 유지한다.",
+        "난간과 해안 마을은 최소한의 환경 맥락으로만 남긴다.",
+        "원본의 조명, 노출, 화이트 밸런스와 사실적인 사진 질감을 유지한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "원본 사진을 테이블 위 음식 중심의 클로즈업으로 재구성한다. 치즈 조각, 얇게 썬 햄, 빵과 포카치아, 와인병, 물병, 잔과 접시가 주요 피사체로 더 크게 보이도록 음식이 놓인 원형 테이블 주변을 타이트하게 크롭한다. 음식은 잘리지 않게 가능한 한 온전히 포함하고, 테이블 위 실제 배치와 물체의 형태·개수·재질·색·라벨·그림자·원근을 그대로 유지한다. 난간과 해안 마을 풍경은 장소를 알 수 있을 정도의 최소한의 보조 배경만 남긴다. 원본과 같은 자연스러운 다큐멘터리 사진 표현과 가로형 종횡비를 유지한다.",
+      "use_case": "precise-object-edit"
+    }
+  ],
+  "execution_prompt": "음식 기준으로 클로즈업 되게 잘라줘"
 }

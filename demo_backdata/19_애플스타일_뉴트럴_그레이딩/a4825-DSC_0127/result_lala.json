@@ -1,30 +1,63 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster → lut",
+  "tool_sequence": [
+    "remaster",
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_5267ac2c033feb3c",
-  "output_sha256": "a2ed19ebaccf5a19a8cd74cea715049c76a20c1d1eee888f06899bce203f8291",
+  "request_id": "full_remaster_5267ac2c033feb3c",
+  "output_sha256": "13d8a8c5859c9df871af41ec43f91e654d82906a42c86a0cd8c1aeadf08d60f8",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
     },
     {
       "skill_id": "restrained-warm-cool-separation",
-      "version": "1.0.2"
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "apple_neutral",
-    "lut_intensity": 0.72,
-    "skin_protection": true,
-    "grain_amount": 0.0,
-    "halation": 0.0
-  }
+  "parameters": [
+    {
+      "brightness": 0,
+      "contrast": 0,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -3,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": 2,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": -2,
+      "tint": 0,
+      "vignette": 0
+    },
+    {
+      "grain_amount": 0.0,
+      "halation": 0.0,
+      "lut_intensity": 0.55,
+      "preset": "apple_neutral",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "애플 스타일 뉴트럴 룩으로 가자. 화이트밸런스는 쿨 쪽으로 살짝, 채도는 디새추레이션해서 플랫한 raw 톤에 가깝게. 특정 채널만 튀는 캐스트 없이 뉴트럴하게 유지하고 스킨톤은 보존."
 }

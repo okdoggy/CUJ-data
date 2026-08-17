@@ -1,23 +1,53 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_gen_f01c7822911b303d",
-  "output_sha256": "ed3d2ef8fe10a012b2f78960240a40763f7401f8d771096a50e8be09ad0f3f28",
+  "request_id": "full_remaster_f01c7822911b303d",
+  "output_sha256": "4930b25e468e9ce40b1d3f61d7020075efe59476c4ca349e6690ffdd2f9ed592",
   "evidence": [
-    {
-      "skill_id": "natural-skin-tone-and-texture-preservation",
-      "version": "1.0.0"
-    },
     {
       "skill_id": "semantic-mask-composition-and-edge-check",
       "version": "1.0.3"
+    },
+    {
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
     }
   ],
-  "parameters": {
-    "use_case": "identity-preserve",
-    "actual_size": "1536x1024"
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "얼굴 성형 또는 이목구비 변경",
+        "피부 미백, 과도한 스무딩이나 뷰티 리터칭",
+        "표정, 시선, 나이 또는 헤어스타일 변경",
+        "손가락의 추가·삭제·변형",
+        "새로운 꽃, 장신구, 의상 또는 배경 생성",
+        "인물의 머리나 턱을 어색하게 절단하는 지나치게 타이트한 크롭",
+        "색보정, 분위기 변경, 인공 조명 또는 배경 흐림 추가",
+        "텍스트, 로고 또는 워터마크 추가"
+      ],
+      "constraints": [
+        "동일 인물의 정체성과 얼굴 구조를 보존할 것",
+        "원래 표정과 카메라를 바라보는 시선을 유지할 것",
+        "머리 윗부분, 머리카락, 턱선을 자르지 않을 것",
+        "가능한 범위에서 턱을 받친 손과 자세를 유지할 것",
+        "원본의 피부색과 자연스러운 피부 질감을 유지할 것",
+        "원본 정원 배경과 꽃만 사용하고 새로운 배경 요소를 추가하지 않을 것",
+        "색감, 노출, 조명과 의상 외형을 변경하지 않을 것",
+        "원본에 가장 가까운 가로형 3:2 종횡비를 유지할 것"
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "입력 사진을 원본으로 사용하여 인물의 얼굴을 중심으로 자연스러운 클로즈업 인물 사진으로 크롭하고 재구성한다. 얼굴이 프레임의 주된 초점이 되도록 머리와 어깨 위주의 타이트한 구도를 만들고, 머리 윗부분과 머리카락·턱선이 잘리지 않게 한다. 가능하면 턱을 받친 손과 원래 자세의 핵심을 자연스럽게 포함한다. 인물의 동일인 정체성, 얼굴형, 눈·코·입의 형태와 위치, 표정, 시선, 머리카락, 피부색과 실제 피부 질감을 정확히 보존한다. 배경은 원본 정원과 꽃을 그대로 유지하되 크롭으로 보이는 범위만 줄이고 새 요소를 만들지 않는다. 색상, 노출, 조명, 초점 특성은 원본과 동일하게 유지한다. 출력 종횡비는 원본에 가장 가까운 가로형 3:2 비율로 유지한다.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "인물 얼굴 기준으로 클로즈업 되게 잘라줘"
 }

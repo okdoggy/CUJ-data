@@ -1,26 +1,67 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster → lut",
+  "tool_sequence": [
+    "remaster",
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_16b7b56232be4aea",
-  "output_sha256": "83963abf46d5ab23ea517e4a5e320391d65f644c7d60dff04d2dc0733d30dc19",
+  "request_id": "full_remaster_16b7b56232be4aea",
+  "output_sha256": "55116485fe678f57af74dbd4c326f10a812f974b486f4edf1cf82ee4d10b2e82",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
       "version": "1.0.1"
     },
     {
       "skill_id": "restrained-warm-cool-separation",
+      "version": "1.0.3"
+    },
+    {
+      "skill_id": "base-correction-before-creative-grade",
       "version": "1.0.2"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.1"
     }
   ],
-  "parameters": {
-    "preset": "summer_pastel",
-    "lut_intensity": 0.58,
-    "skin_protection": false,
-    "grain_amount": 0.05,
-    "halation": 0.03
-  }
+  "parameters": [
+    {
+      "brightness": 2,
+      "contrast": 1,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -2,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": 4,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": -2,
+      "tint": 2,
+      "vignette": 0
+    },
+    {
+      "grain_amount": 0.0,
+      "halation": 0.0,
+      "lut_intensity": 0.55,
+      "preset": "summer_pastel",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "청량하고 시원한 여름 느낌으로 해줘"
 }

@@ -26,5 +26,6 @@
     "lut_intensity": 0.52,
     "grain_amount": 0.07,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "빈티지 필름 카메라로 찍은 것처럼 해줘"
 }

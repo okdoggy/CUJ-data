@@ -1,15 +1,19 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "lut",
+  "tool_sequence": [
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_0f525e928414a27e",
-  "output_sha256": "e25e44b729b16eb677343bd7369dbb5c9e3475d5855db89d5d73a9e40ee701e0",
+  "request_id": "full_remaster_0f525e928414a27e",
+  "output_sha256": "f09fbcd7c7188eb78b82456c6f1417e64d3d3eaac0003bcf1e368d3bfc6da546",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "restrained-atmospheric-softness",
@@ -17,14 +21,18 @@
     },
     {
       "skill_id": "restrained-warm-cool-separation",
-      "version": "1.0.2"
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "romance",
-    "lut_intensity": 0.58,
-    "skin_protection": true,
-    "grain_amount": 0.18,
-    "halation": 0.1
-  }
+  "parameters": [
+    {
+      "grain_amount": 0.05,
+      "halation": 0.04,
+      "lut_intensity": 0.55,
+      "preset": "romance",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "코닥 계열 웜톤 필름 룩으로 시네마틱 그레이딩 해줘. 파인 그레인 살짝 얹고, 하이라이트엔 할레이션 약하게. 스킨톤 시프트는 잡아줘."
 }

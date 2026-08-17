@@ -1,30 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "remaster",
+  "tool_sequence": [
+    "remaster"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_6ecbaec5f259ac5f",
-  "output_sha256": "38db67d31104943362789b71b139a31ef019a5054730d4575d95d65cc33a0c87",
+  "request_id": "full_remaster_6ecbaec5f259ac5f",
+  "output_sha256": "51c735a7fc82b3ba2133172afc066060c802a22fa654643677754513300ee5c6",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "skill_id": "diagnostic-tonal-shaping-and-endpoints",
-      "version": "1.0.0"
-    },
-    {
-      "skill_id": "restrained-warm-cool-separation",
-      "version": "1.0.2"
+      "version": "1.0.1"
     }
   ],
-  "parameters": {
-    "preset": "apple_neutral",
-    "lut_intensity": 0.24,
-    "skin_protection": true,
-    "grain_amount": 0.0,
-    "halation": 0.0
-  }
+  "parameters": [
+    {
+      "brightness": 2,
+      "contrast": -1,
+      "denoise": 0,
+      "gain_b": 1.0,
+      "gain_g": 1.0,
+      "gain_r": 1.0,
+      "gamma_b": 1.0,
+      "gamma_g": 1.0,
+      "gamma_r": 1.0,
+      "highlights": -3,
+      "hsl_selective": [],
+      "saturation": 0,
+      "shadows": 5,
+      "sharpen_amount": 0.0,
+      "sharpness": 0,
+      "temperature": 0,
+      "tint": 0,
+      "vignette": 0
+    }
+  ],
+  "execution_prompt": "보정 좀 해줘. 근데 편집한 느낌 없이 자연스럽게"
 }

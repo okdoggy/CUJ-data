@@ -1,26 +1,58 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
-  "tool": "lut",
+  "calibration_version": "1.2.0",
+  "tool": "generate_ai",
+  "tool_sequence": [
+    "generate_ai"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_1de83824f34b652e",
-  "output_sha256": "520842b7683e115c39d1395f59cd1e4dc33eb756bc07b3757b2206e2b2a17ec0",
+  "request_id": "full_remaster_1de83824f34b652e",
+  "output_sha256": "6c303dd67880e793a4f0c923925423edac6ddfc1b34e158bdc4f5cddef9b9d81",
   "evidence": [
     {
-      "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
+      "skill_id": "natural-subject-background-separation",
+      "version": "1.0.0"
     },
     {
-      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "skill_id": "natural-skin-tone-and-texture-preservation",
       "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
     }
   ],
-  "parameters": {
-    "preset": "apple_neutral",
-    "lut_intensity": 0.3,
-    "skin_protection": true,
-    "grain_amount": 0.0,
-    "halation": 0.0
-  }
+  "parameters": [
+    {
+      "avoid": [
+        "HDR처럼 평평한 명암",
+        "과도한 그림자 상승과 회색 안개막",
+        "피부 스무딩, 미용 보정 또는 얼굴 재해석",
+        "인물 정체성이나 나이 변화",
+        "손가락·안경·책·의상 형태의 변형",
+        "머리카락과 의상 경계의 halo 또는 오려 붙인 듯한 흔적",
+        "새로운 광원, 렌즈 플레어, 글로우 또는 색조 스타일 추가",
+        "과포화, 강한 선명화, 인위적인 색온도 변화",
+        "배경 재구성, 물체 추가·삭제 또는 텍스트 변경"
+      ],
+      "constraints": [
+        "두 인물의 정체성, 나이, 얼굴 구조, 표정, 시선과 자세를 정확히 유지한다.",
+        "아이와 노인의 피부색 및 피부·머리카락 질감을 자연스럽게 유지하고 미용 보정이나 피부 평활화를 하지 않는다.",
+        "창문과 커튼의 기존 밝기 및 역광 방향을 유지하며 하이라이트를 새로 만들거나 과도하게 밝히지 않는다.",
+        "인물과 책의 어두운 중간톤만 완만하게 회복하고 검은 옷과 실내 암부의 깊이를 남긴다.",
+        "안경, 손가락, 손, 책의 글자와 가장자리, 의상 형태를 변경하지 않는다.",
+        "배경 물체를 추가·삭제·이동하거나 형태와 색을 바꾸지 않는다.",
+        "원본 구도, 크롭, 카메라 시점과 가로형 종횡비를 유지한다.",
+        "자연스러운 사진 질감과 기존 노이즈 특성을 보존한다."
+      ],
+      "execution_mode": "openai-image-api",
+      "operation": "edit",
+      "output_format": "png",
+      "prompt": "Naturally correct this underexposed backlit indoor family photograph without making it look edited. Gently lift the exposure and readable midtones only on the elderly man and the young child, including their faces, hair, clothing, hands, and the open book, while preserving realistic shadow depth and the original direction of light from the window behind them. Recover natural, restrained skin tones without smoothing skin or changing facial features. Keep the bright window, curtains, lamp, furniture, sofa, clock, tissue box, pens, telephone, toys, and all other background objects unchanged in identity, position, color, and structure. Preserve the candid documentary character, subdued color palette, natural texture, original noise character, and realistic indoor contrast. Make the transition around hair, glasses, clothing, hands, and the book seamless, with no halo or cutout appearance. Preserve both people's exact identities, ages, expressions, gaze, pose, anatomy, eyeglasses, hands, clothing, and interaction. Preserve the original composition, framing, camera perspective, and approximately 1599:1064 landscape aspect ratio. Apply only a subtle photographic exposure correction; the final image must look like an unedited original photograph.",
+      "use_case": "identity-preserve"
+    }
+  ],
+  "execution_prompt": "보정 좀 해줘. 근데 편집한 느낌 없이 자연스럽게"
 }

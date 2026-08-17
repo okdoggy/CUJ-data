@@ -21,5 +21,6 @@
       "version": "1.0.0"
     }
   ],
-  "parameters": {}
+  "parameters": {},
+  "execution_prompt": "사진 좀 예쁘게 만들어줘"
 }

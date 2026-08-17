@@ -1,26 +1,30 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "runner": "Learnable Agent",
+  "calibration_version": "1.2.0",
   "tool": "lut",
+  "tool_sequence": [
+    "lut"
+  ],
   "status": "completed",
   "result_file": "lala.jpg",
-  "request_id": "eval_lut_60f8995199f28601",
-  "output_sha256": "05283fbea80df88d37fad174985124e3bf001a060e43d047c3a78c73f590d04b",
+  "request_id": "full_remaster_60f8995199f28601",
+  "output_sha256": "988b01c4ba46c0a24afc5564c0383edcaf4c17d3bdf42352214c4c5cb24fb9ea",
   "evidence": [
     {
       "skill_id": "base-correction-before-creative-grade",
-      "version": "1.0.1"
-    },
-    {
-      "skill_id": "restrained-atmospheric-softness",
-      "version": "1.0.0"
+      "version": "1.0.2"
     }
   ],
-  "parameters": {
-    "preset": "matte_fade",
-    "lut_intensity": 0.5,
-    "skin_protection": true,
-    "grain_amount": 0.1,
-    "halation": 0.05
-  }
+  "parameters": [
+    {
+      "grain_amount": 0.0,
+      "halation": 0.0,
+      "lut_intensity": 0.325,
+      "preset": "summer_pastel",
+      "skin_protection": true,
+      "use_aces": true
+    }
+  ],
+  "execution_prompt": "필터 느낌 너무 세, 강도 절반으로 은은하게 낮춰줘"
 }

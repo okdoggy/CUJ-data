@@ -26,5 +26,6 @@
     "lut_intensity": 0.5,
     "grain_amount": 0.0,
     "halation": 0.0
-  }
+  },
+  "execution_prompt": "여행 사진인데 밋밋해, 화사하고 시네마틱하게 살려줘"
 }
