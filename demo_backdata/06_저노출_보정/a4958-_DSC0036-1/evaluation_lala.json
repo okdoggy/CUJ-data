@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "negative",
+  "review": "LALA LUT 결과는 저노출 복원 목표에 비해 어두운 암부와 낮은 중간톤 대비가 유지된다. Vibe와 Nano가 주 피사체를 더 읽기 쉽게 만들며, Nano는 과노출·색온도 과장이 동반될 수 있다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "limited",
+  "review": "LALA의 낮은 대비가 매트 필름과 일부 맞지만, 하이라이트 롤오프·색 분리보다 haze가 먼저 보인다. Vibe는 필름 효과가 더 읽히고, Nano는 필름 톤을 과도하게 연출하는 경우가 있다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "generate_ai",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_gen_4bcb568c3b383222",
+  "output_sha256": "b25e7fcbb189923d00465ca419097d87811879db2247f930c5b28a75a539c076",
+  "evidence": [
+    {
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
+    }
+  ],
+  "parameters": {
+    "use_case": "identity-preserve",
+    "actual_size": "1024x1536"
+  }
+}

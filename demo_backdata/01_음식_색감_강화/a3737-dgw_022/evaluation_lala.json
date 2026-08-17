@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "limited",
+  "review": "음식 색과 테이블 디테일은 보존됐지만 LALA 결과는 원본 대비 변화가 작고 중간톤이 평평한 case가 있다. Vibe/Nano는 식재료의 색 분리와 대비가 더 뚜렷하다. Generate AI case는 구도는 유지했으나 재생성 결과이므로 원본 동일성 확인이 필요하다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

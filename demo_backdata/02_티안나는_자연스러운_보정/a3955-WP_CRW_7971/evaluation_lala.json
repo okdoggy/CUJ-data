@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "limited",
+  "review": "LALA는 장면 구조와 피부를 안전하게 보존하지만, 노출·화이트밸런스 개선량이 작아 저대비·회색 막처럼 보이는 case가 있다. FiveK가 있는 case는 더 균형 잡힌 명암 기준을 보이며, Nano는 변화를 과장하는 경향이 있다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

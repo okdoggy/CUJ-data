@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "generate_ai",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_gen_eb48b1e6b185bf40",
+  "output_sha256": "3f22fd99e57e98b58ff9f902c363fef5f83ad0b11497bbc1068699c7272ea0ee",
+  "evidence": [
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
+    }
+  ],
+  "parameters": {
+    "use_case": "precise-object-edit",
+    "actual_size": "1024x1536"
+  }
+}

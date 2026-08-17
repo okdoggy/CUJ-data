@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "generate_ai",
+  "verdict": "positive",
+  "review": "LALA Generate AI는 메인 피사체를 화면 중심으로 확대한 결과가 명확해 원본 전체 장면보다 목적 적합성이 높다. Vibe와 Nano에도 유사 크롭이 있으나 LALA는 덜 장식적이다. 생성 기반 프레이밍의 동일성 리스크는 남는다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

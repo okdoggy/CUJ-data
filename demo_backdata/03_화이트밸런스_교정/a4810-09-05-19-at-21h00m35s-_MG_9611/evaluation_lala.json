@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "negative",
+  "review": "LALA는 색 편향을 충분히 교정하지 못하고 밝기와 채도도 낮게 남았다. Vibe와 FiveK는 중립 회색과 피부/백색 물체의 균형이 더 낫다. Nano는 일부 장면에서 과도한 색온도 이동이 있다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}
