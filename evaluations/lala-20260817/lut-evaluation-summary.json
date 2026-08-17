@@ -1,0 +1,91 @@
+{
+  "suite": "cuj-20260817-lut",
+  "source_commit": "17cb9486e44a454a2e7e55c482c83aa2e6fac4d9",
+  "total_cases": 114,
+  "status_counts": {
+    "COMPLETED": 100,
+    "LUT_UNSUPPORTED": 14
+  },
+  "valid_png_outputs": 100,
+  "invalid_output_count": 0,
+  "category_status_counts": {
+    "01": {
+      "COMPLETED": 4,
+      "LUT_UNSUPPORTED": 1
+    },
+    "02": {
+      "COMPLETED": 5
+    },
+    "03": {
+      "COMPLETED": 5
+    },
+    "04": {
+      "COMPLETED": 2,
+      "LUT_UNSUPPORTED": 3
+    },
+    "05": {
+      "COMPLETED": 5
+    },
+    "06": {
+      "COMPLETED": 5
+    },
+    "07": {
+      "COMPLETED": 5
+    },
+    "08": {
+      "COMPLETED": 5
+    },
+    "09": {
+      "COMPLETED": 5
+    },
+    "10": {
+      "LUT_UNSUPPORTED": 5
+    },
+    "11": {
+      "COMPLETED": 6
+    },
+    "12": {
+      "COMPLETED": 6
+    },
+    "13": {
+      "COMPLETED": 6
+    },
+    "14": {
+      "COMPLETED": 6
+    },
+    "15": {
+      "COMPLETED": 6
+    },
+    "16": {
+      "COMPLETED": 6
+    },
+    "17": {
+      "COMPLETED": 5
+    },
+    "18": {
+      "COMPLETED": 6
+    },
+    "19": {
+      "COMPLETED": 6
+    },
+    "20": {
+      "LUT_UNSUPPORTED": 5
+    },
+    "21": {
+      "COMPLETED": 6
+    }
+  },
+  "preset_counts": {
+    "apple_neutral": 19,
+    "clean_modern": 22,
+    "cold_blue": 1,
+    "documentary": 1,
+    "film_noir": 6,
+    "fuji_velvia": 2,
+    "matte_fade": 13,
+    "moody_dark": 6,
+    "romance": 17,
+    "summer_pastel": 8,
+    "teal_orange": 5
+  }
+}

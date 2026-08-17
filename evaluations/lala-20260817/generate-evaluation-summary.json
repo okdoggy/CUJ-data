@@ -1,0 +1,32 @@
+{
+  "suite": "cuj-20260817-generate-ai",
+  "total_candidates": 14,
+  "status_counts": {
+    "COMPLETED": 14
+  },
+  "valid_png_outputs": 14,
+  "invalid_output_count": 0,
+  "category_status_counts": {
+    "01": {
+      "COMPLETED": 1
+    },
+    "04": {
+      "COMPLETED": 3
+    },
+    "10": {
+      "COMPLETED": 5
+    },
+    "20": {
+      "COMPLETED": 5
+    }
+  },
+  "actual_size_counts": {
+    "1024x1536": 7,
+    "1536x1024": 7
+  },
+  "use_case_counts": {
+    "compositing": 1,
+    "identity-preserve": 10,
+    "precise-object-edit": 3
+  }
+}

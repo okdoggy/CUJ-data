@@ -1,0 +1,786 @@
+[
+  {
+    "case_id": "0340a41e8e937cc3",
+    "category": "01",
+    "source_relative_path": "01_음식_색감_강화/a0411-07-11-21-at-13h12m13s-_MG_5935",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "853f09b05c28fbfa",
+    "category": "01",
+    "source_relative_path": "01_음식_색감_강화/a3172-050724_145616__MG_3619",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_853f09b05c28fbfa/output/result.png"
+  },
+  {
+    "case_id": "627e959e3c416a85",
+    "category": "01",
+    "source_relative_path": "01_음식_색감_강화/a3737-dgw_022",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_627e959e3c416a85/output/result.png"
+  },
+  {
+    "case_id": "27556bd5b530f9c8",
+    "category": "01",
+    "source_relative_path": "01_음식_색감_강화/a3624-DSC_0070",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_27556bd5b530f9c8/output/result.png"
+  },
+  {
+    "case_id": "6ecbaec5f259ac5f",
+    "category": "02",
+    "source_relative_path": "02_티안나는_자연스러운_보정/a3391-050904_125814__I2E8654",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_6ecbaec5f259ac5f/output/result.png"
+  },
+  {
+    "case_id": "d1f2a1b913087abb",
+    "category": "01",
+    "source_relative_path": "01_음식_색감_강화/a4336-09-05-17-at-15h52m34s-_MG_9211",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_d1f2a1b913087abb/output/result.png"
+  },
+  {
+    "case_id": "6dd1770585638d87",
+    "category": "02",
+    "source_relative_path": "02_티안나는_자연스러운_보정/a3905-kme_177",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_6dd1770585638d87/output/result.png"
+  },
+  {
+    "case_id": "1de83824f34b652e",
+    "category": "02",
+    "source_relative_path": "02_티안나는_자연스러운_보정/a3955-WP_CRW_7971",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_1de83824f34b652e/output/result.png"
+  },
+  {
+    "case_id": "d29a2e8ff3b929ef",
+    "category": "02",
+    "source_relative_path": "02_티안나는_자연스러운_보정/a4082-IMG_8370",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_d29a2e8ff3b929ef/output/result.png"
+  },
+  {
+    "case_id": "50d6b5bc53ab64cf",
+    "category": "02",
+    "source_relative_path": "02_티안나는_자연스러운_보정/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_50d6b5bc53ab64cf/output/result.png"
+  },
+  {
+    "case_id": "a271c9ccffb43364",
+    "category": "03",
+    "source_relative_path": "03_화이트밸런스_교정/a4230-Duggan_090426_7798",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_a271c9ccffb43364/output/result.png"
+  },
+  {
+    "case_id": "65759106d3fad0de",
+    "category": "03",
+    "source_relative_path": "03_화이트밸런스_교정/a4224-DSC_0321",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_65759106d3fad0de/output/result.png"
+  },
+  {
+    "case_id": "6c7800de08d3ac27",
+    "category": "03",
+    "source_relative_path": "03_화이트밸런스_교정/a4810-09-05-19-at-21h00m35s-_MG_9611",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_6c7800de08d3ac27/output/result.png"
+  },
+  {
+    "case_id": "c5f89d0b22a652e8",
+    "category": "03",
+    "source_relative_path": "03_화이트밸런스_교정/a4293-20090406_at_22h40m24__MG_1277",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_c5f89d0b22a652e8/output/result.png"
+  },
+  {
+    "case_id": "846b891517b221b1",
+    "category": "03",
+    "source_relative_path": "03_화이트밸런스_교정/a4996-Duggan_090426_7783",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_846b891517b221b1/output/result.png"
+  },
+  {
+    "case_id": "c6d6eabf82ed8ad9",
+    "category": "04",
+    "source_relative_path": "04_흐릿한_사진_선명하게/a2760-IMG_0016",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "e55bc66e8d5d279a",
+    "category": "04",
+    "source_relative_path": "04_흐릿한_사진_선명하게/a3380-IMG_0034",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_e55bc66e8d5d279a/output/result.png"
+  },
+  {
+    "case_id": "95e52c17b581ce85",
+    "category": "04",
+    "source_relative_path": "04_흐릿한_사진_선명하게/a3839-WP_CRW_9536",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "f97efd240939fe85",
+    "category": "04",
+    "source_relative_path": "04_흐릿한_사진_선명하게/a4321-kme_0635",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_f97efd240939fe85/output/result.png"
+  },
+  {
+    "case_id": "877e8ed571de3334",
+    "category": "05",
+    "source_relative_path": "05_역광_보정/a3886-_DGW6415",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_877e8ed571de3334/output/result.png"
+  },
+  {
+    "case_id": "29e89168472a17f1",
+    "category": "05",
+    "source_relative_path": "05_역광_보정/a4042-IMG_4600",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_29e89168472a17f1/output/result.png"
+  },
+  {
+    "case_id": "c853691a27e7d10c",
+    "category": "04",
+    "source_relative_path": "04_흐릿한_사진_선명하게/a4404-20090519_at_22h53m01__MG_9648",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "d7348263081c1ebf",
+    "category": "05",
+    "source_relative_path": "05_역광_보정/a4129-MB_070908_033",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_d7348263081c1ebf/output/result.png"
+  },
+  {
+    "case_id": "9839fabc8aae61ea",
+    "category": "05",
+    "source_relative_path": "05_역광_보정/a4151-dvf_026",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_9839fabc8aae61ea/output/result.png"
+  },
+  {
+    "case_id": "555e9d955be1bce4",
+    "category": "05",
+    "source_relative_path": "05_역광_보정/a4188-_MG_1604",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_555e9d955be1bce4/output/result.png"
+  },
+  {
+    "case_id": "1a07643ffae12b35",
+    "category": "06",
+    "source_relative_path": "06_저노출_보정/a1316-kme_587",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_1a07643ffae12b35/output/result.png"
+  },
+  {
+    "case_id": "afe68292ba65ce42",
+    "category": "06",
+    "source_relative_path": "06_저노출_보정/a3263-jn_2007_05_14__779",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_afe68292ba65ce42/output/result.png"
+  },
+  {
+    "case_id": "221d2147eea32d65",
+    "category": "06",
+    "source_relative_path": "06_저노출_보정/a4312-20090417_at_16h32m44__MG_1867",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_221d2147eea32d65/output/result.png"
+  },
+  {
+    "case_id": "01d12ab9db9f9fa0",
+    "category": "06",
+    "source_relative_path": "06_저노출_보정/a4958-_DSC0036-1",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_01d12ab9db9f9fa0/output/result.png"
+  },
+  {
+    "case_id": "5b175be718fdd89f",
+    "category": "06",
+    "source_relative_path": "06_저노출_보정/a4991-20090327_at_06h08m24__MG_0852",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_5b175be718fdd89f/output/result.png"
+  },
+  {
+    "case_id": "99861746c3fb43ac",
+    "category": "07",
+    "source_relative_path": "07_예쁘게_해줘/a3391-050904_125814__I2E8654",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_99861746c3fb43ac/output/result.png"
+  },
+  {
+    "case_id": "c6d584575243cd8d",
+    "category": "07",
+    "source_relative_path": "07_예쁘게_해줘/a3905-kme_177",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_c6d584575243cd8d/output/result.png"
+  },
+  {
+    "case_id": "9e3e93af10793af2",
+    "category": "07",
+    "source_relative_path": "07_예쁘게_해줘/a3955-WP_CRW_7971",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_9e3e93af10793af2/output/result.png"
+  },
+  {
+    "case_id": "f41dbe38d2cbbddb",
+    "category": "07",
+    "source_relative_path": "07_예쁘게_해줘/a4082-IMG_8370",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_f41dbe38d2cbbddb/output/result.png"
+  },
+  {
+    "case_id": "0a067884504bcce4",
+    "category": "07",
+    "source_relative_path": "07_예쁘게_해줘/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_0a067884504bcce4/output/result.png"
+  },
+  {
+    "case_id": "0ffa7056af08a421",
+    "category": "08",
+    "source_relative_path": "08_인생샷_복합자동/a1639-_DSC0006",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_0ffa7056af08a421/output/result.png"
+  },
+  {
+    "case_id": "74c87db621ce7241",
+    "category": "08",
+    "source_relative_path": "08_인생샷_복합자동/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_74c87db621ce7241/output/result.png"
+  },
+  {
+    "case_id": "ec8ced23656f3dae",
+    "category": "08",
+    "source_relative_path": "08_인생샷_복합자동/a3710-07-11-20-at-16h52m05s-_MG_5742",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_ec8ced23656f3dae/output/result.png"
+  },
+  {
+    "case_id": "4969bf5740723c2e",
+    "category": "08",
+    "source_relative_path": "08_인생샷_복합자동/a4223-kme_00003",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_4969bf5740723c2e/output/result.png"
+  },
+  {
+    "case_id": "8ff9d9ddb2a4db56",
+    "category": "08",
+    "source_relative_path": "08_인생샷_복합자동/a4567-WP_CRW_4310",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_8ff9d9ddb2a4db56/output/result.png"
+  },
+  {
+    "case_id": "26a46197114404b3",
+    "category": "09",
+    "source_relative_path": "09_여행스냅_살리기/a3794-kme_583",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_26a46197114404b3/output/result.png"
+  },
+  {
+    "case_id": "5c048be0bafb36a6",
+    "category": "09",
+    "source_relative_path": "09_여행스냅_살리기/a4003-NKIM_MG_6603",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_5c048be0bafb36a6/output/result.png"
+  },
+  {
+    "case_id": "792bd2cb993de12a",
+    "category": "09",
+    "source_relative_path": "09_여행스냅_살리기/a4287-_DSC0083",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_792bd2cb993de12a/output/result.png"
+  },
+  {
+    "case_id": "2278de239fe94f27",
+    "category": "09",
+    "source_relative_path": "09_여행스냅_살리기/a4673-CRW_0009",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_2278de239fe94f27/output/result.png"
+  },
+  {
+    "case_id": "0e3adbe8fffad668",
+    "category": "09",
+    "source_relative_path": "09_여행스냅_살리기/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_0e3adbe8fffad668/output/result.png"
+  },
+  {
+    "case_id": "d5a8b0a1f625697c",
+    "category": "10",
+    "source_relative_path": "10_크롭_메인피사체/a4053-07-09-16-at-11h25m31s-_MG_3439",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "a4df5036c672b9e8",
+    "category": "10",
+    "source_relative_path": "10_크롭_음식기준/a0411-07-11-21-at-13h12m13s-_MG_5935",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "eb48b1e6b185bf40",
+    "category": "10",
+    "source_relative_path": "10_크롭_음식기준/food_10",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "f01c7822911b303d",
+    "category": "10",
+    "source_relative_path": "10_크롭_인물기준/a3477-_DSC0048",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "c5dae3610de12551",
+    "category": "10",
+    "source_relative_path": "10_크롭_인물기준/a4003-NKIM_MG_6603",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "58e7f5ea98e7401e",
+    "category": "11",
+    "source_relative_path": "11_감성_무드_연출/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_58e7f5ea98e7401e/output/result.png"
+  },
+  {
+    "case_id": "c9a5a913d46cd133",
+    "category": "11",
+    "source_relative_path": "11_감성_무드_연출/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_c9a5a913d46cd133/output/result.png"
+  },
+  {
+    "case_id": "61a5997188a9698b",
+    "category": "11",
+    "source_relative_path": "11_감성_무드_연출/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_61a5997188a9698b/output/result.png"
+  },
+  {
+    "case_id": "72a0f5aa5cb7fa42",
+    "category": "11",
+    "source_relative_path": "11_감성_무드_연출/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_72a0f5aa5cb7fa42/output/result.png"
+  },
+  {
+    "case_id": "68c2267db7511442",
+    "category": "11",
+    "source_relative_path": "11_감성_무드_연출/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_68c2267db7511442/output/result.png"
+  },
+  {
+    "case_id": "470c90b3aa299954",
+    "category": "11",
+    "source_relative_path": "11_감성_무드_연출/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_470c90b3aa299954/output/result.png"
+  },
+  {
+    "case_id": "ab0efa88d5732829",
+    "category": "12",
+    "source_relative_path": "12_깔끔모던/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_ab0efa88d5732829/output/result.png"
+  },
+  {
+    "case_id": "c9f98b4f0e5c3c2a",
+    "category": "12",
+    "source_relative_path": "12_깔끔모던/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_c9f98b4f0e5c3c2a/output/result.png"
+  },
+  {
+    "case_id": "9865d3fd007d0be7",
+    "category": "12",
+    "source_relative_path": "12_깔끔모던/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_9865d3fd007d0be7/output/result.png"
+  },
+  {
+    "case_id": "af6cf36cb2caebe3",
+    "category": "12",
+    "source_relative_path": "12_깔끔모던/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_af6cf36cb2caebe3/output/result.png"
+  },
+  {
+    "case_id": "164cc199aa4c293f",
+    "category": "12",
+    "source_relative_path": "12_깔끔모던/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_164cc199aa4c293f/output/result.png"
+  },
+  {
+    "case_id": "03b7cfb39ba9bd0d",
+    "category": "12",
+    "source_relative_path": "12_깔끔모던/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_03b7cfb39ba9bd0d/output/result.png"
+  },
+  {
+    "case_id": "91203779bb600e52",
+    "category": "13",
+    "source_relative_path": "13_느와르_흑백영화/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_91203779bb600e52/output/result.png"
+  },
+  {
+    "case_id": "ee33134647b68788",
+    "category": "13",
+    "source_relative_path": "13_느와르_흑백영화/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_ee33134647b68788/output/result.png"
+  },
+  {
+    "case_id": "ab967544bde58c58",
+    "category": "13",
+    "source_relative_path": "13_느와르_흑백영화/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_ab967544bde58c58/output/result.png"
+  },
+  {
+    "case_id": "0eae90c5b7a3b86c",
+    "category": "13",
+    "source_relative_path": "13_느와르_흑백영화/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_0eae90c5b7a3b86c/output/result.png"
+  },
+  {
+    "case_id": "1caa798639360ec2",
+    "category": "13",
+    "source_relative_path": "13_느와르_흑백영화/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_1caa798639360ec2/output/result.png"
+  },
+  {
+    "case_id": "8082e617fd2d57b5",
+    "category": "13",
+    "source_relative_path": "13_느와르_흑백영화/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_8082e617fd2d57b5/output/result.png"
+  },
+  {
+    "case_id": "b93d8e85d367a1a8",
+    "category": "14",
+    "source_relative_path": "14_무겁고_어두운_무드/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_b93d8e85d367a1a8/output/result.png"
+  },
+  {
+    "case_id": "b76eeafc1030fe1a",
+    "category": "14",
+    "source_relative_path": "14_무겁고_어두운_무드/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_b76eeafc1030fe1a/output/result.png"
+  },
+  {
+    "case_id": "6918c8fb719575b2",
+    "category": "14",
+    "source_relative_path": "14_무겁고_어두운_무드/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_6918c8fb719575b2/output/result.png"
+  },
+  {
+    "case_id": "da83f067a8704878",
+    "category": "14",
+    "source_relative_path": "14_무겁고_어두운_무드/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_da83f067a8704878/output/result.png"
+  },
+  {
+    "case_id": "f93809270724eccb",
+    "category": "14",
+    "source_relative_path": "14_무겁고_어두운_무드/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_f93809270724eccb/output/result.png"
+  },
+  {
+    "case_id": "a465b5ed93bab97f",
+    "category": "14",
+    "source_relative_path": "14_무겁고_어두운_무드/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_a465b5ed93bab97f/output/result.png"
+  },
+  {
+    "case_id": "7ee17631f64db226",
+    "category": "15",
+    "source_relative_path": "15_매트_필름_감성/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_7ee17631f64db226/output/result.png"
+  },
+  {
+    "case_id": "a3de14ab62b59cbb",
+    "category": "15",
+    "source_relative_path": "15_매트_필름_감성/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_a3de14ab62b59cbb/output/result.png"
+  },
+  {
+    "case_id": "b5def54eaa27b7f3",
+    "category": "15",
+    "source_relative_path": "15_매트_필름_감성/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_b5def54eaa27b7f3/output/result.png"
+  },
+  {
+    "case_id": "6a4219d39eef415e",
+    "category": "15",
+    "source_relative_path": "15_매트_필름_감성/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_6a4219d39eef415e/output/result.png"
+  },
+  {
+    "case_id": "41be67000092c7c2",
+    "category": "15",
+    "source_relative_path": "15_매트_필름_감성/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_41be67000092c7c2/output/result.png"
+  },
+  {
+    "case_id": "e1cab885778dace3",
+    "category": "15",
+    "source_relative_path": "15_매트_필름_감성/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_e1cab885778dace3/output/result.png"
+  },
+  {
+    "case_id": "d3d1c7ea65d42775",
+    "category": "16",
+    "source_relative_path": "16_빈티지_필름/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_d3d1c7ea65d42775/output/result.png"
+  },
+  {
+    "case_id": "1c007e2b1fb66c16",
+    "category": "16",
+    "source_relative_path": "16_빈티지_필름/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_1c007e2b1fb66c16/output/result.png"
+  },
+  {
+    "case_id": "56070ff7f4a5a6d2",
+    "category": "16",
+    "source_relative_path": "16_빈티지_필름/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_56070ff7f4a5a6d2/output/result.png"
+  },
+  {
+    "case_id": "4e9f52542b222036",
+    "category": "16",
+    "source_relative_path": "16_빈티지_필름/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_4e9f52542b222036/output/result.png"
+  },
+  {
+    "case_id": "677726f8749b4c07",
+    "category": "16",
+    "source_relative_path": "16_빈티지_필름/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_677726f8749b4c07/output/result.png"
+  },
+  {
+    "case_id": "385857481ae9d3db",
+    "category": "16",
+    "source_relative_path": "16_빈티지_필름/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_385857481ae9d3db/output/result.png"
+  },
+  {
+    "case_id": "0f71ef8a106d1059",
+    "category": "17",
+    "source_relative_path": "17_청량한_여름/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_0f71ef8a106d1059/output/result.png"
+  },
+  {
+    "case_id": "0fd56c97b5ad0408",
+    "category": "17",
+    "source_relative_path": "17_청량한_여름/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_0fd56c97b5ad0408/output/result.png"
+  },
+  {
+    "case_id": "01b8aba8c8c484ab",
+    "category": "17",
+    "source_relative_path": "17_청량한_여름/sky",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_01b8aba8c8c484ab/output/result.png"
+  },
+  {
+    "case_id": "16b7b56232be4aea",
+    "category": "17",
+    "source_relative_path": "17_청량한_여름/sky6_lake",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_16b7b56232be4aea/output/result.png"
+  },
+  {
+    "case_id": "54bbc333e67686b2",
+    "category": "17",
+    "source_relative_path": "17_청량한_여름/sky9_autumn",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_54bbc333e67686b2/output/result.png"
+  },
+  {
+    "case_id": "a9bdbbeaff464814",
+    "category": "18",
+    "source_relative_path": "18_시네마틱_컬러_그레이딩/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_a9bdbbeaff464814/output/result.png"
+  },
+  {
+    "case_id": "c139f2566cded150",
+    "category": "18",
+    "source_relative_path": "18_시네마틱_컬러_그레이딩/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_c139f2566cded150/output/result.png"
+  },
+  {
+    "case_id": "1bf7aecc319d7ec1",
+    "category": "18",
+    "source_relative_path": "18_시네마틱_컬러_그레이딩/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_1bf7aecc319d7ec1/output/result.png"
+  },
+  {
+    "case_id": "0f525e928414a27e",
+    "category": "18",
+    "source_relative_path": "18_시네마틱_컬러_그레이딩/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_0f525e928414a27e/output/result.png"
+  },
+  {
+    "case_id": "76fe35bf9f0a1d38",
+    "category": "18",
+    "source_relative_path": "18_시네마틱_컬러_그레이딩/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_76fe35bf9f0a1d38/output/result.png"
+  },
+  {
+    "case_id": "8c9581f756e630bd",
+    "category": "18",
+    "source_relative_path": "18_시네마틱_컬러_그레이딩/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_8c9581f756e630bd/output/result.png"
+  },
+  {
+    "case_id": "aaaa31661e523be7",
+    "category": "19",
+    "source_relative_path": "19_애플스타일_뉴트럴_그레이딩/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_aaaa31661e523be7/output/result.png"
+  },
+  {
+    "case_id": "5267ac2c033feb3c",
+    "category": "19",
+    "source_relative_path": "19_애플스타일_뉴트럴_그레이딩/a4825-DSC_0127",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_5267ac2c033feb3c/output/result.png"
+  },
+  {
+    "case_id": "d8f75400cd82ee1e",
+    "category": "19",
+    "source_relative_path": "19_애플스타일_뉴트럴_그레이딩/a4892-DSC_0126",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_d8f75400cd82ee1e/output/result.png"
+  },
+  {
+    "case_id": "8dbb18fd1ede18bf",
+    "category": "19",
+    "source_relative_path": "19_애플스타일_뉴트럴_그레이딩/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_8dbb18fd1ede18bf/output/result.png"
+  },
+  {
+    "case_id": "339a8611ca514526",
+    "category": "19",
+    "source_relative_path": "19_애플스타일_뉴트럴_그레이딩/human_3",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_339a8611ca514526/output/result.png"
+  },
+  {
+    "case_id": "20091c012b92a15f",
+    "category": "19",
+    "source_relative_path": "19_애플스타일_뉴트럴_그레이딩/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_20091c012b92a15f/output/result.png"
+  },
+  {
+    "case_id": "4bcb568c3b383222",
+    "category": "20",
+    "source_relative_path": "20_주파수분리_피부_리터치/a3425-DSC_0012",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "eec7e953177326f4",
+    "category": "20",
+    "source_relative_path": "20_주파수분리_피부_리터치/a3428-_DSC0014",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "b17cf89c2b05bb39",
+    "category": "20",
+    "source_relative_path": "20_주파수분리_피부_리터치/a3679-IMG_4033",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "b7413b833ff9cfcd",
+    "category": "20",
+    "source_relative_path": "20_주파수분리_피부_리터치/a4388-_DGW0257",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "801a0e547d91dea0",
+    "category": "20",
+    "source_relative_path": "20_주파수분리_피부_리터치/a4491-09-05-17-at-20h14m55s-_MG_9251",
+    "status": "LUT_UNSUPPORTED"
+  },
+  {
+    "case_id": "60f8995199f28601",
+    "category": "21",
+    "source_relative_path": "21_대화형_강도절반/human_2",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_60f8995199f28601/output/result.png"
+  },
+  {
+    "case_id": "a644cfc6318b7b62",
+    "category": "21",
+    "source_relative_path": "21_대화형_강도조율/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_a644cfc6318b7b62/output/result.png"
+  },
+  {
+    "case_id": "f8caeb6f12cd4470",
+    "category": "21",
+    "source_relative_path": "21_대화형_미세조정/human_6",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_f8caeb6f12cd4470/output/result.png"
+  },
+  {
+    "case_id": "597d88f565bb6eab",
+    "category": "21",
+    "source_relative_path": "21_대화형_방향반전/human_5",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_597d88f565bb6eab/output/result.png"
+  },
+  {
+    "case_id": "05958b12c3911c4d",
+    "category": "21",
+    "source_relative_path": "21_대화형_은은하게톤다운/a3153-IMG_0123",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_05958b12c3911c4d/output/result.png"
+  },
+  {
+    "case_id": "a33181d794d661b0",
+    "category": "21",
+    "source_relative_path": "21_대화형_자연스럽게마무리/human_6",
+    "status": "COMPLETED",
+    "output_path": "runtime/var/jobs/eval_lut_a33181d794d661b0/output/result.png"
+  }
+]
