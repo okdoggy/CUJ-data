@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "generate_ai",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_gen_c853691a27e7d10c",
+  "output_sha256": "b89868ae2d6902361b38a07ac200caaac5176f93030af15425d2c868a0fb7dd1",
+  "evidence": [
+    {
+      "skill_id": "natural-skin-tone-and-texture-preservation",
+      "version": "1.0.0"
+    }
+  ],
+  "parameters": {
+    "use_case": "identity-preserve",
+    "actual_size": "1536x1024"
+  }
+}

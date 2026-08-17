@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "lut",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_lut_c139f2566cded150",
+  "output_sha256": "8042630f96ba4aa11134a460d389c24f61551ae345ae4c27462d0b024eb40f32",
+  "evidence": [
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "restrained-warm-cool-separation",
+      "version": "1.0.2"
+    },
+    {
+      "skill_id": "restrained-atmospheric-softness",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.0"
+    }
+  ],
+  "parameters": {
+    "preset": "romance",
+    "lut_intensity": 0.58,
+    "skin_protection": true,
+    "grain_amount": 0.16,
+    "halation": 0.1
+  }
+}

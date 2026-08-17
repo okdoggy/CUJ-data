@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "lut",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_lut_65759106d3fad0de",
+  "output_sha256": "74226392926f08842b31d80df9f9cd072a89346334415bb97db68e40d0b5c2ca",
+  "evidence": [
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "restrained-warm-cool-separation",
+      "version": "1.0.2"
+    }
+  ],
+  "parameters": {
+    "preset": "apple_neutral",
+    "lut_intensity": 0.62,
+    "skin_protection": false,
+    "grain_amount": 0.0,
+    "halation": 0.0
+  }
+}

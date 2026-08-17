@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "lut",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_lut_e55bc66e8d5d279a",
+  "output_sha256": "fcde4fdf181607c6f97365a2c1b8906c71bc772ce4baa515da108c8e7cf0c4cd",
+  "evidence": [
+    {
+      "skill_id": "detail-preserving-denoise-and-edge-sharpen",
+      "version": "1.0.2"
+    }
+  ],
+  "parameters": {
+    "preset": "clean_modern",
+    "lut_intensity": 0.35,
+    "skin_protection": true,
+    "grain_amount": 0.0,
+    "halation": 0.0
+  }
+}

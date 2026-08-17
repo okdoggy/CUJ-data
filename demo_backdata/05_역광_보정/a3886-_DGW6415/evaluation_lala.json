@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "negative",
+  "review": "LALA는 역광 인물/건물의 암부를 충분히 들어 올리지 못했고, 일부 case에서 전체가 흐리고 회색으로 남는다. Nano는 밝은 피사체를 강하게 복원하지만 하이라이트가 과해질 수 있다. FiveK는 가능한 case에서 더 자연스러운 노출 균형이다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

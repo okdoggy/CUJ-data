@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "mixed",
+  "review": "LALA의 방향 전환은 제한적으로 보이며 원본에 가까운 안전한 결과다. Nano는 방향이 더 뚜렷하지만 실제 장면의 색·질감을 바꿀 수 있어 단순 반전 요구에는 과도하다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "lut",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_lut_853f09b05c28fbfa",
+  "output_sha256": "11f547d34702d97edbbd899f51859e658d2a0e802b22787968e36762861c16f0",
+  "evidence": [
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.1"
+    }
+  ],
+  "parameters": {
+    "preset": "clean_modern",
+    "lut_intensity": 0.14,
+    "skin_protection": false,
+    "grain_amount": 0.0,
+    "halation": 0.0
+  }
+}

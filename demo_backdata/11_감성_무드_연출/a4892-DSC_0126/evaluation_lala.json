@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "review_method": "direct_contact_sheet_visual_review",
+  "reviewer": "Hermes Agent",
+  "review_scope": [
+    "before",
+    "vibe_after",
+    "lala",
+    "nano_banana",
+    "baseline_fivek_when_available"
+  ],
+  "lala_tool": "lut",
+  "verdict": "limited",
+  "review": "LALA는 의도된 감성 톤을 약하게만 적용해 원본보다 살짝 탈색·저대비로 보이는 경향이 있다. Vibe는 톤 방향이 더 뚜렷하고 Nano는 따뜻한 빛·색을 과감하게 추가한다. FiveK는 자연스러운 참조로서 LALA보다 명암 분리가 낫다.",
+  "limitations": "비교 시트의 육안 검토다. FiveK는 제공된 case에만 비교했으며, 생성형 결과는 원본 해상도 확대 검수가 추가로 필요하다."
+}

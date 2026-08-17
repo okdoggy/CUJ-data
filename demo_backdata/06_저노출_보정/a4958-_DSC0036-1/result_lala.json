@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "lut",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_lut_01d12ab9db9f9fa0",
+  "output_sha256": "037ed185dd76a06dd2bb1db80b0f9010147d03b2f43b6b1db4385dd6aef3d05f",
+  "evidence": [
+    {
+      "skill_id": "base-correction-before-creative-grade",
+      "version": "1.0.1"
+    },
+    {
+      "skill_id": "diagnostic-tonal-shaping-and-endpoints",
+      "version": "1.0.0"
+    }
+  ],
+  "parameters": {
+    "preset": "summer_pastel",
+    "lut_intensity": 0.78,
+    "skin_protection": true,
+    "grain_amount": 0.03,
+    "halation": 0.02
+  }
+}

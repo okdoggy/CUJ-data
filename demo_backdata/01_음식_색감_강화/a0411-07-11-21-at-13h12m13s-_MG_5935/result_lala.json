@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "runner": "Learnable Agent",
+  "tool": "generate_ai",
+  "status": "completed",
+  "result_file": "lala.jpg",
+  "request_id": "eval_gen_0340a41e8e937cc3",
+  "output_sha256": "78e5eaa11275692afc3b05ff492aeb57046c2b78561ad24323e65c755dfc1db8",
+  "evidence": [
+    {
+      "skill_id": "protected-local-color-change",
+      "version": "1.0.0"
+    },
+    {
+      "skill_id": "semantic-mask-composition-and-edge-check",
+      "version": "1.0.3"
+    },
+    {
+      "skill_id": "natural-subject-background-separation",
+      "version": "1.0.0"
+    }
+  ],
+  "parameters": {
+    "use_case": "precise-object-edit",
+    "actual_size": "1536x1024"
+  }
+}
