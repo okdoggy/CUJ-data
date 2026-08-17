@@ -1,0 +1,83 @@
+{
+  "scenario_id": "20_대화형_미세조정",
+  "title": "대화형 편집",
+  "source_image": "human_6.jpg",
+  "baseline": null,
+  "session_id": "2d9205f1-bf94-42e8-8425-6913973c42ef",
+  "ok": true,
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "깔끔하고 모던하게 해줘",
+      "edit_id": "cde04549-b461-4f66-8b1d-b95905ddb18e",
+      "latency_ms": 12160,
+      "chat_message": "Apply a clean and modern aesthetic to the image.",
+      "intent": "Apply a clean and modern aesthetic to the image.",
+      "is_correction": null,
+      "tools_used": [
+        {
+          "tool_name": "color_grade",
+          "params": {
+            "gain_r": 0.92,
+            "gain_b": 1.08
+          }
+        },
+        {
+          "tool_name": "expert_grade",
+          "params": {
+            "preset": "clean_modern",
+            "lut_intensity": 0.9,
+            "skin_protection": true,
+            "grain_amount": 0.2,
+            "halation": 0.15,
+            "use_aces": true
+          }
+        }
+      ],
+      "tool_count": 2,
+      "image_saved": "after_1.jpg",
+      "elapsed_s": 15.85
+    },
+    {
+      "turn": 2,
+      "prompt": "조금만 더 대비 살려줘",
+      "edit_id": "25fae53f-79e2-45cb-8c2d-e87c36c5c5d0",
+      "latency_ms": 14428,
+      "chat_message": "Enhance the image contrast slightly using an S-curve.",
+      "intent": "Enhance the image contrast slightly using an S-curve.",
+      "is_correction": null,
+      "tools_used": [
+        {
+          "tool_name": "color_curves",
+          "params": {
+            "master": [
+              [
+                0,
+                0
+              ],
+              [
+                50,
+                30
+              ],
+              [
+                128,
+                128
+              ],
+              [
+                200,
+                220
+              ],
+              [
+                255,
+                255
+              ]
+            ]
+          }
+        }
+      ],
+      "tool_count": 1,
+      "image_saved": "after_2.jpg",
+      "elapsed_s": 18.95
+    }
+  ]
+}

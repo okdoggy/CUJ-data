@@ -1,0 +1,47 @@
+{
+  "scenario_id": "01_음식_색감_강화",
+  "title": "음식 색감 강화",
+  "source_image": "a4336-09-05-17-at-15h52m34s-_MG_9211.jpg",
+  "baseline": "fivek",
+  "session_id": "6c2444b0-3cc3-4f31-87ca-8da75a5defe0",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘.",
+    "edit_id": "b4b3608c-0258-4a69-9ed7-cababcfeec11",
+    "latency_ms": 20591,
+    "chat_message": "Make the food colors more vibrant and lively without applying a filter-like feel or changing the overall tone, by first neutralizing the warm color cast and then selectively enhancing red and pink hues.",
+    "intent": "Make the food colors more vibrant and lively without applying a filter-like feel or changing the overall tone, by first neutralizing the warm color cast and then selectively enhancing red and pink hues.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gain_r": 0.92,
+          "gain_b": 1.08
+        }
+      },
+      {
+        "tool_name": "hsl_selective",
+        "params": {
+          "target_hue": 0,
+          "hue_range": 30,
+          "saturation_shift": 25,
+          "luminance_shift": 10
+        }
+      },
+      {
+        "tool_name": "hsl_selective",
+        "params": {
+          "target_hue": 330,
+          "hue_range": 30,
+          "saturation_shift": 25,
+          "luminance_shift": 10
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 23.82
+  }
+}

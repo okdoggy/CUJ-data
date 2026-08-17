@@ -1,0 +1,39 @@
+{
+  "scenario_id": "05_역광_보정",
+  "title": "역광 보정",
+  "source_image": "a4129-MB_070908_033.jpg",
+  "baseline": "fivek",
+  "session_id": "95308a06-ee7e-4bcd-912d-eb032fca98f9",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "역광 사진이라 전체적으로 어두워, 사진 전체를 밝고 화사하게 살려줘",
+    "edit_id": "1a73b008-ca2d-40f0-ba66-3c85ca9f9c57",
+    "latency_ms": 20793,
+    "chat_message": "전체적으로 어두운 역광 사진을 밝고 화사하게 보정합니다.",
+    "intent": "전체적으로 어두운 역광 사진을 밝고 화사하게 보정합니다.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 25
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "summer_pastel",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.3,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 24.21
+  }
+}

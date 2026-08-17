@@ -1,0 +1,33 @@
+{
+  "scenario_id": "10_감성_무드_연출",
+  "title": "감성 무드 연출",
+  "source_image": "human_5.jpg",
+  "baseline": null,
+  "session_id": "357a342d-a370-48c0-ae8e-2c3c0253426c",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "따뜻하고 감성적인 분위기로 바꿔줘",
+    "edit_id": "ccfa2bb0-5265-4e91-9e96-859ddf629b51",
+    "latency_ms": 14464,
+    "chat_message": "Apply a warm and emotional aesthetic to the image.",
+    "intent": "Apply a warm and emotional aesthetic to the image.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "golden_hour",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.2,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 17.43
+  }
+}

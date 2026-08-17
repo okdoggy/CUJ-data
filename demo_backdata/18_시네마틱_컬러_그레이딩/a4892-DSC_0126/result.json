@@ -1,0 +1,33 @@
+{
+  "scenario_id": "17_시네마틱_컬러_그레이딩",
+  "title": "시네마틱 컬러 그레이딩",
+  "source_image": "a4892-DSC_0126.jpg",
+  "baseline": null,
+  "session_id": "8d10a0ad-4eb9-4ca0-b829-8af1550a8558",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "코닥 계열 웜톤 필름 룩으로 시네마틱 그레이딩 해줘. 파인 그레인 살짝 얹고, 하이라이트엔 할레이션 약하게. 스킨톤 시프트는 잡아줘.",
+    "edit_id": "4956d3f1-dff0-4cf2-aa48-b6c36c7acbd1",
+    "latency_ms": 21670,
+    "chat_message": "Apply a warm Kodak film look with cinematic grading, fine grain, slight halation, and skin tone protection.",
+    "intent": "Apply a warm Kodak film look with cinematic grading, fine grain, slight halation, and skin tone protection.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "warm_kodak",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.15,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 25.65
+  }
+}

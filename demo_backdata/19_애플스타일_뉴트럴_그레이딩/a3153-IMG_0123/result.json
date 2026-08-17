@@ -1,0 +1,40 @@
+{
+  "scenario_id": "18_애플스타일_뉴트럴_그레이딩",
+  "title": "애플 스타일 뉴트럴 그레이딩",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": null,
+  "session_id": "9c62e5ef-3bda-4d67-b8a7-a70b1bfeba9d",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "애플 스타일 뉴트럴 룩으로 가자. 화이트밸런스는 쿨 쪽으로 살짝, 채도는 디새추레이션해서 플랫한 raw 톤에 가깝게. 특정 채널만 튀는 캐스트 없이 뉴트럴하게 유지하고 스킨톤은 보존.",
+    "edit_id": "8ddfb10d-f6a8-4463-b127-82755ce9e57c",
+    "latency_ms": 17533,
+    "chat_message": "Apply an Apple style neutral look with a cool white balance, desaturated flat raw tones, and preserved skin tones.",
+    "intent": "Apply an Apple style neutral look with a cool white balance, desaturated flat raw tones, and preserved skin tones.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gain_r": 0.92,
+          "gain_b": 1.08
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "apple_neutral",
+          "lut_intensity": 0.95,
+          "skin_protection": true,
+          "grain_amount": 0.2,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 21.14
+  }
+}

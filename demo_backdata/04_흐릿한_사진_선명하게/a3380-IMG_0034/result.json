@@ -1,0 +1,28 @@
+{
+  "scenario_id": "04_흐릿한_사진_선명하게",
+  "title": "흐릿한 사진 선명하게 (소스 의존적)",
+  "source_image": "a3380-IMG_0034.jpg",
+  "baseline": null,
+  "session_id": "9e0dbc94-4aef-45e1-b614-6178a507b5be",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "사진이 흐려, 선명하게 해줘",
+    "edit_id": "e6afa85a-5793-4886-a75a-fe27e919e015",
+    "latency_ms": 11427,
+    "chat_message": "선명하게 해달라는 요청에 따라 이미지를 선명하게 만듭니다.",
+    "intent": "선명하게 해달라는 요청에 따라 이미지를 선명하게 만듭니다.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.5
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 14.71
+  }
+}

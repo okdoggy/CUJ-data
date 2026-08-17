@@ -1,0 +1,39 @@
+{
+  "scenario_id": "02_티안나는_자연스러운_보정",
+  "title": "티 안 나는 자연스러운 보정",
+  "source_image": "a3905-kme_177.jpg",
+  "baseline": "fivek",
+  "session_id": "373d1ced-8691-451b-8ba2-4f62078fce05",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "보정 좀 해줘. 근데 편집한 느낌 없이 자연스럽게",
+    "edit_id": "8a6aa5f6-1329-40bf-9e83-72b13342c695",
+    "latency_ms": 20550,
+    "chat_message": "Enhance the image naturally without an overly edited feel, improving overall color, tone, and sharpness.",
+    "intent": "Enhance the image naturally without an overly edited feel, improving overall color, tone, and sharpness.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "documentary",
+          "lut_intensity": 0.8,
+          "skin_protection": false,
+          "grain_amount": 0.15,
+          "halation": 0.1,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.1
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 24.13
+  }
+}

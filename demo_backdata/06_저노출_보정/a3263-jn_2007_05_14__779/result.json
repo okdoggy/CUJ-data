@@ -1,0 +1,39 @@
+{
+  "scenario_id": "06_저노출_보정",
+  "title": "저노출 보정",
+  "source_image": "a3263-jn_2007_05_14__779.jpg",
+  "baseline": "fivek",
+  "session_id": "f0bbed71-4506-4078-85d3-b5c04ca6f1db",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "너무 어둡게 나왔어, 밝고 화사하게 살려줘",
+    "edit_id": "ef33454f-3146-45c8-bcc2-7ae05b89b308",
+    "latency_ms": 17423,
+    "chat_message": "Make the image brighter and more vibrant, as it appears too dark.",
+    "intent": "Make the image brighter and more vibrant, as it appears too dark.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 25
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "fuji_velvia",
+          "lut_intensity": 0.8,
+          "skin_protection": true,
+          "grain_amount": 0.15,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 20.45
+  }
+}

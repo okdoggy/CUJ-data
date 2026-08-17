@@ -1,0 +1,45 @@
+{
+  "scenario_id": "07_인생샷_복합자동",
+  "title": "인생샷 (복합 자동 chain)",
+  "source_image": "a4567-WP_CRW_4310.jpg",
+  "baseline": "fivek",
+  "session_id": "d42e3cf0-919b-42e6-a25a-1dd26bb91f85",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "이 사진 인생샷으로 만들어줘",
+    "edit_id": "03d4f620-8bc9-453e-8e43-8413c02a767f",
+    "latency_ms": 27551,
+    "chat_message": "Transform the photo into a 'best shot of my life' by enhancing its aesthetic with color grading, noise reduction, and subtle sharpening.",
+    "intent": "Transform the photo into a 'best shot of my life' by enhancing its aesthetic with color grading, noise reduction, and subtle sharpening.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "denoise",
+        "params": {
+          "h": 10
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "warm_kodak",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.0,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 0.6
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 31.01
+  }
+}

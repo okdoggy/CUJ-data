@@ -1,0 +1,28 @@
+{
+  "scenario_id": "04_흐릿한_사진_선명하게",
+  "title": "흐릿한 사진 선명하게 (소스 의존적)",
+  "source_image": "a3839-WP_CRW_9536.jpg",
+  "baseline": null,
+  "session_id": "0a21cbe5-32bd-484d-a715-a45fd075a729",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "사진이 흐려, 선명하게 해줘",
+    "edit_id": "aa5274e2-0fb4-46f4-9066-2485e4652d6b",
+    "latency_ms": 13369,
+    "chat_message": "The user wants to sharpen the blurry image.",
+    "intent": "The user wants to sharpen the blurry image.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.0
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 16.88
+  }
+}

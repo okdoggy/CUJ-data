@@ -1,0 +1,45 @@
+{
+  "scenario_id": "07_인생샷_복합자동",
+  "title": "인생샷 (복합 자동 chain)",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": "fivek",
+  "session_id": "fb0157db-b75a-4b33-b33d-3864a6279850",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "이 사진 인생샷으로 만들어줘",
+    "edit_id": "f62ddc75-4361-4161-8709-03d546bbb285",
+    "latency_ms": 24444,
+    "chat_message": "Enhance the photo to create a 'life shot' with a romantic and clean aesthetic, improving overall quality and mood.",
+    "intent": "Enhance the photo to create a 'life shot' with a romantic and clean aesthetic, improving overall quality and mood.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "denoise",
+        "params": {
+          "h": 10
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "romance",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.25,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 0.9
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 27.69
+  }
+}

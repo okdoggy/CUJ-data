@@ -1,0 +1,39 @@
+{
+  "scenario_id": "21_예쁘게_해줘",
+  "title": "사진 좀 예쁘게 만들어줘 (포괄 지시)",
+  "source_image": "a3391-050904_125814__I2E8654.jpg",
+  "baseline": "fivek",
+  "session_id": "4b5d6eed-2f2f-4d5c-9d73-d7371082500e",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "사진 좀 예쁘게 만들어줘",
+    "edit_id": "c1c70b28-7ed4-4c02-8ae5-f0c271403595",
+    "latency_ms": 27922,
+    "chat_message": "Enhance the aesthetic appeal of the night scene by brightening and applying a warm, cinematic film look.",
+    "intent": "Enhance the aesthetic appeal of the night scene by brightening and applying a warm, cinematic film look.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 25
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "warm_kodak",
+          "lut_intensity": 0.75,
+          "skin_protection": false,
+          "grain_amount": 0.15,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 31.83
+  }
+}

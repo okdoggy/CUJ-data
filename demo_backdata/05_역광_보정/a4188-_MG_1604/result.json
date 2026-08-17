@@ -1,0 +1,39 @@
+{
+  "scenario_id": "05_역광_보정",
+  "title": "역광 보정",
+  "source_image": "a4188-_MG_1604.jpg",
+  "baseline": "fivek",
+  "session_id": "af8068cd-fbd1-488e-aebf-fafe72963f32",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "역광 사진이라 전체적으로 어두워, 사진 전체를 밝고 화사하게 살려줘",
+    "edit_id": "b318c9e3-4e58-40ef-bbcd-66f8860539f6",
+    "latency_ms": 17935,
+    "chat_message": "To brighten the underexposed backlit photo and apply a vibrant, gentle, and slightly warm color grade.",
+    "intent": "To brighten the underexposed backlit photo and apply a vibrant, gentle, and slightly warm color grade.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 25
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "romance",
+          "lut_intensity": 0.75,
+          "skin_protection": true,
+          "grain_amount": 0.25,
+          "halation": 0.1,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 20.9
+  }
+}

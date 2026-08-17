@@ -1,0 +1,36 @@
+{
+  "scenario_id": "09_크롭_인물기준",
+  "title": "크롭",
+  "source_image": "a4003-NKIM_MG_6603.jpg",
+  "baseline": null,
+  "session_id": "3b7c5470-2cb8-4ccf-8724-c2996d74e88b",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "인물 얼굴 기준으로 클로즈업 되게 잘라줘",
+    "edit_id": "c4325fa3-6de9-480b-b684-175e7fd5f908",
+    "latency_ms": 23631,
+    "chat_message": "Crop the image to close up on the faces of the people.",
+    "intent": "Crop the image to close up on the faces of the people.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "region_mask",
+        "params": {
+          "description": "faces of the people",
+          "feather": 0
+        }
+      },
+      {
+        "tool_name": "crop",
+        "params": {
+          "bbox_ref": "faces_mask",
+          "padding": 0.1
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 26.36
+  }
+}

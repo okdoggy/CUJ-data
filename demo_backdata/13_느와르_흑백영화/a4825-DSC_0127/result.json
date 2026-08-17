@@ -1,0 +1,33 @@
+{
+  "scenario_id": "12_느와르_흑백영화",
+  "title": "느와르 흑백 영화",
+  "source_image": "a4825-DSC_0127.jpg",
+  "baseline": null,
+  "session_id": "51911f0c-ee62-4ac2-9d5b-f97302e1fa32",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "느와르 영화의 한 장면처럼 만들어줘",
+    "edit_id": "94c84c2a-415c-4c05-9f62-b1baf0a89e21",
+    "latency_ms": 16394,
+    "chat_message": "Transform the image into a film noir style, characterized by a moody, high-contrast, and often desaturated or black-and-white aesthetic.",
+    "intent": "Transform the image into a film noir style, characterized by a moody, high-contrast, and often desaturated or black-and-white aesthetic.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "film_noir",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.35,
+          "halation": 0.1,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 19.83
+  }
+}

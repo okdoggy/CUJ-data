@@ -1,0 +1,33 @@
+{
+  "scenario_id": "13_무겁고_어두운_무드",
+  "title": "무겁고 어두운 무드",
+  "source_image": "a4892-DSC_0126.jpg",
+  "baseline": null,
+  "session_id": "a70b0b7e-83e6-436b-8ec6-c53cc83c55df",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "어둡고 무게감 있는 무드로 만들어줘",
+    "edit_id": "45d3a964-38e7-4941-af6f-1cbb85984b0c",
+    "latency_ms": 17262,
+    "chat_message": "Change the image to a dark and weighty mood.",
+    "intent": "Change the image to a dark and weighty mood.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "moody_dark",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.1,
+          "halation": 0.1,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 20.85
+  }
+}

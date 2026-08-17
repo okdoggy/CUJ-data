@@ -1,0 +1,678 @@
+{
+  "version": 1,
+  "round": "260808",
+  "source_dir": "demo_backdata/_source_images",
+  "baseline_dirs": {
+    "fivek": "demo_backdata/_baseline_fivek"
+  },
+  "baseline_labels": {
+    "fivek": "Expert (Adobe FiveK)"
+  },
+  "note": "images 목록을 교체하면 build/run/eval 전 단계가 따라간다. baseline=null 이면 절대평가 전용 카드.",
+  "scenarios": [
+    {
+      "id": "01_음식_색감_강화",
+      "section_num": 1,
+      "section_title": "음식 색감 강화",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "S1-2",
+      "turns": 1,
+      "prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘.",
+      "baseline": "fivek",
+      "images": [
+        "a0411-07-11-21-at-13h12m13s-_MG_5935",
+        "a3172-050724_145616__MG_3619",
+        "a3624-DSC_0070",
+        "a3737-dgw_022",
+        "a4336-09-05-17-at-15h52m34s-_MG_9211"
+      ],
+      "images_new": [
+        "a0411-07-11-21-at-13h12m13s-_MG_5935",
+        "a3172-050724_145616__MG_3619",
+        "a3624-DSC_0070",
+        "a3737-dgw_022",
+        "a4336-09-05-17-at-15h52m34s-_MG_9211"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "02_티안나는_자연스러운_보정",
+      "section_num": 2,
+      "section_title": "티 안 나는 자연스러운 보정",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "S1-6",
+      "turns": 1,
+      "prompt": "보정 좀 해줘. 근데 편집한 느낌 없이 자연스럽게",
+      "baseline": "fivek",
+      "images": [
+        "a3391-050904_125814__I2E8654",
+        "a3905-kme_177",
+        "a3955-WP_CRW_7971",
+        "a4082-IMG_8370",
+        "a4825-DSC_0127"
+      ],
+      "images_new": [
+        "a3391-050904_125814__I2E8654",
+        "a3905-kme_177",
+        "a3955-WP_CRW_7971",
+        "a4082-IMG_8370",
+        "a4825-DSC_0127"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "03_화이트밸런스_교정",
+      "section_num": 3,
+      "section_title": "화이트밸런스 교정 (캐스트 제거)",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "VD-3",
+      "turns": 1,
+      "prompt": "조명 때문에 누렇게 떴어, 자연광처럼 화이트밸런스 맞춰줘",
+      "baseline": "fivek",
+      "images": [
+        "a4224-DSC_0321",
+        "a4230-Duggan_090426_7798",
+        "a4293-20090406_at_22h40m24__MG_1277",
+        "a4810-09-05-19-at-21h00m35s-_MG_9611",
+        "a4996-Duggan_090426_7783"
+      ],
+      "images_new": [
+        "a4224-DSC_0321",
+        "a4230-Duggan_090426_7798",
+        "a4293-20090406_at_22h40m24__MG_1277",
+        "a4810-09-05-19-at-21h00m35s-_MG_9611",
+        "a4996-Duggan_090426_7783"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "04_흐릿한_사진_선명하게",
+      "section_num": 4,
+      "section_title": "흐릿한 사진 선명하게 (소스 의존적)",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "S1-4",
+      "turns": 1,
+      "prompt": "사진이 흐려, 선명하게 해줘",
+      "baseline": null,
+      "images": [
+        "a2760-IMG_0016",
+        "a3380-IMG_0034",
+        "a3839-WP_CRW_9536",
+        "a4321-kme_0635",
+        "a4404-20090519_at_22h53m01__MG_9648"
+      ],
+      "images_new": [
+        "a2760-IMG_0016",
+        "a3380-IMG_0034",
+        "a3839-WP_CRW_9536",
+        "a4321-kme_0635",
+        "a4404-20090519_at_22h53m01__MG_9648"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "05_역광_보정",
+      "section_num": 5,
+      "section_title": "역광 보정",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "VF-1",
+      "turns": 1,
+      "prompt": "역광 사진이라 전체적으로 어두워, 사진 전체를 밝고 화사하게 살려줘",
+      "baseline": "fivek",
+      "images": [
+        "a3886-_DGW6415",
+        "a4042-IMG_4600",
+        "a4129-MB_070908_033",
+        "a4151-dvf_026",
+        "a4188-_MG_1604"
+      ],
+      "images_new": [
+        "a3886-_DGW6415",
+        "a4042-IMG_4600",
+        "a4129-MB_070908_033",
+        "a4151-dvf_026",
+        "a4188-_MG_1604"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "06_저노출_보정",
+      "section_num": 6,
+      "section_title": "저노출 보정",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "VF-2",
+      "turns": 1,
+      "prompt": "너무 어둡게 나왔어, 밝고 화사하게 살려줘",
+      "baseline": "fivek",
+      "images": [
+        "a1316-kme_587",
+        "a3263-jn_2007_05_14__779",
+        "a4312-20090417_at_16h32m44__MG_1867",
+        "a4958-_DSC0036-1",
+        "a4991-20090327_at_06h08m24__MG_0852"
+      ],
+      "images_new": [
+        "a1316-kme_587",
+        "a3263-jn_2007_05_14__779",
+        "a4312-20090417_at_16h32m44__MG_1867",
+        "a4958-_DSC0036-1",
+        "a4991-20090327_at_06h08m24__MG_0852"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "07_예쁘게_해줘",
+      "section_num": 7,
+      "section_title": "예쁘게 (포괄 지시)",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "S1-21",
+      "turns": 1,
+      "prompt": "사진 좀 예쁘게 만들어줘",
+      "baseline": "fivek",
+      "images": [
+        "a3391-050904_125814__I2E8654",
+        "a3905-kme_177",
+        "a3955-WP_CRW_7971",
+        "a4082-IMG_8370",
+        "a4825-DSC_0127"
+      ],
+      "images_new": [
+        "a3391-050904_125814__I2E8654",
+        "a3905-kme_177",
+        "a3955-WP_CRW_7971",
+        "a4082-IMG_8370",
+        "a4825-DSC_0127"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "08_인생샷_복합자동",
+      "section_num": 8,
+      "section_title": "인생샷 (복합 자동 chain)",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "VA-1",
+      "turns": 1,
+      "prompt": "이 사진 인생샷으로 만들어줘",
+      "baseline": "fivek",
+      "images": [
+        "a1639-_DSC0006",
+        "a3153-IMG_0123",
+        "a3710-07-11-20-at-16h52m05s-_MG_5742",
+        "a4223-kme_00003",
+        "a4567-WP_CRW_4310"
+      ],
+      "images_new": [
+        "a1639-_DSC0006",
+        "a3153-IMG_0123",
+        "a3710-07-11-20-at-16h52m05s-_MG_5742",
+        "a4223-kme_00003",
+        "a4567-WP_CRW_4310"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "09_여행스냅_살리기",
+      "section_num": 9,
+      "section_title": "여행 스냅 살리기 (복합 자동 chain)",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "VA-3",
+      "turns": 1,
+      "prompt": "여행 사진인데 밋밋해, 화사하고 시네마틱하게 살려줘",
+      "baseline": "fivek",
+      "images": [
+        "a3794-kme_583",
+        "a4003-NKIM_MG_6603",
+        "a4287-_DSC0083",
+        "a4673-CRW_0009",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "a3794-kme_583",
+        "a4003-NKIM_MG_6603",
+        "a4287-_DSC0083",
+        "a4673-CRW_0009",
+        "a4892-DSC_0126"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "10_크롭_인물기준",
+      "section_num": 10,
+      "section_title": "크롭",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "S4-1",
+      "turns": 1,
+      "prompt": "인물 얼굴 기준으로 클로즈업 되게 잘라줘",
+      "baseline": null,
+      "images": [
+        "a3477-_DSC0048",
+        "a4003-NKIM_MG_6603"
+      ],
+      "images_new": [
+        "a3477-_DSC0048",
+        "a4003-NKIM_MG_6603"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "10_크롭_음식기준",
+      "section_num": 10,
+      "section_title": "크롭",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "S4-2",
+      "turns": 1,
+      "prompt": "음식 기준으로 클로즈업 되게 잘라줘",
+      "baseline": null,
+      "images": [
+        "food_10",
+        "a0411-07-11-21-at-13h12m13s-_MG_5935"
+      ],
+      "images_new": [
+        "a0411-07-11-21-at-13h12m13s-_MG_5935",
+        "food_10"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "10_크롭_메인피사체",
+      "section_num": 10,
+      "section_title": "크롭",
+      "cat": "기본 보정",
+      "legacy_key_prefix": "S4-3",
+      "turns": 1,
+      "prompt": "사진의 메인 피사체 기준으로 잘라줘",
+      "baseline": null,
+      "images": [
+        "a4053-07-09-16-at-11h25m31s-_MG_3439"
+      ],
+      "images_new": [
+        "a4053-07-09-16-at-11h25m31s-_MG_3439"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "11_감성_무드_연출",
+      "section_num": 11,
+      "section_title": "감성 무드 연출",
+      "cat": "무드 · 필름 그레이딩",
+      "legacy_key_prefix": "S1-5",
+      "turns": 1,
+      "prompt": "따뜻하고 감성적인 분위기로 바꿔줘",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126",
+        "human_2",
+        "human_3",
+        "human_5"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "12_깔끔모던",
+      "section_num": 12,
+      "section_title": "깔끔모던 (안전 프리셋)",
+      "cat": "무드 · 필름 그레이딩",
+      "legacy_key_prefix": "VB-2",
+      "turns": 1,
+      "prompt": "깔끔하고 모던하게 해줘",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126",
+        "human_2",
+        "human_3",
+        "human_5"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "13_느와르_흑백영화",
+      "section_num": 13,
+      "section_title": "느와르 흑백 영화",
+      "cat": "무드 · 필름 그레이딩",
+      "legacy_key_prefix": "VC-2",
+      "turns": 1,
+      "prompt": "느와르 영화의 한 장면처럼 만들어줘",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126",
+        "human_2",
+        "human_3",
+        "human_5"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "14_무겁고_어두운_무드",
+      "section_num": 14,
+      "section_title": "무겁고 어두운 무드",
+      "cat": "무드 · 필름 그레이딩",
+      "legacy_key_prefix": "VC-4",
+      "turns": 1,
+      "prompt": "어둡고 무게감 있는 무드로 만들어줘",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126",
+        "human_2",
+        "human_3",
+        "human_5"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "15_매트_필름_감성",
+      "section_num": 15,
+      "section_title": "매트 필름 감성",
+      "cat": "무드 · 필름 그레이딩",
+      "legacy_key_prefix": "VC-5",
+      "turns": 1,
+      "prompt": "인스타 감성 매트 필름 느낌으로 해줘",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126",
+        "human_2",
+        "human_3",
+        "human_5"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "16_빈티지_필름",
+      "section_num": 16,
+      "section_title": "빈티지 필름",
+      "cat": "무드 · 필름 그레이딩",
+      "legacy_key_prefix": "VC-6",
+      "turns": 1,
+      "prompt": "빈티지 필름 카메라로 찍은 것처럼 해줘",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126",
+        "human_2",
+        "human_3",
+        "human_5"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "17_청량한_여름",
+      "section_num": 17,
+      "section_title": "청량한 여름",
+      "cat": "무드 · 필름 그레이딩",
+      "legacy_key_prefix": "VE-1",
+      "turns": 1,
+      "prompt": "청량하고 시원한 여름 느낌으로 해줘",
+      "baseline": null,
+      "images": [
+        "human_5",
+        "sky",
+        "sky6_lake",
+        "sky9_autumn",
+        "a3153-IMG_0123"
+      ],
+      "images_new": [
+        "a3153-IMG_0123",
+        "human_5",
+        "sky",
+        "sky6_lake",
+        "sky9_autumn"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "18_시네마틱_컬러_그레이딩",
+      "section_num": 18,
+      "section_title": "시네마틱 컬러 그레이딩",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "S3-1_nl",
+      "turns": 1,
+      "prompt": "코닥 계열 웜톤 필름 룩으로 시네마틱 그레이딩 해줘. 파인 그레인 살짝 얹고, 하이라이트엔 할레이션 약하게. 스킨톤 시프트는 잡아줘.",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "19_애플스타일_뉴트럴_그레이딩",
+      "section_num": 19,
+      "section_title": "애플 스타일 뉴트럴 그레이딩",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "S3-7_nl",
+      "turns": 1,
+      "prompt": "애플 스타일 뉴트럴 룩으로 가자. 화이트밸런스는 쿨 쪽으로 살짝, 채도는 디새추레이션해서 플랫한 raw 톤에 가깝게. 특정 채널만 튀는 캐스트 없이 뉴트럴하게 유지하고 스킨톤은 보존.",
+      "baseline": null,
+      "images": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_new": [
+        "human_2",
+        "human_3",
+        "human_5",
+        "a3153-IMG_0123",
+        "a4825-DSC_0127",
+        "a4892-DSC_0126"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "20_주파수분리_피부_리터치",
+      "section_num": 20,
+      "section_title": "주파수 분리 피부 리터치",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "S3-2_nl",
+      "turns": 1,
+      "prompt": "주파수 분리로 피부 리터치 해줘. 하이 프리퀀시(모공·피부 결)는 그대로 보존하고, 로우 프리퀀시에서 블레미시와 톤 얼룩만 정리. 오버스무딩 티 안 나게.",
+      "baseline": null,
+      "images": [
+        "a3425-DSC_0012",
+        "a3428-_DSC0014",
+        "a3679-IMG_4033",
+        "a4388-_DGW0257",
+        "a4491-09-05-17-at-20h14m55s-_MG_9251"
+      ],
+      "images_new": [
+        "a3425-DSC_0012",
+        "a3428-_DSC0014",
+        "a3679-IMG_4033",
+        "a4388-_DGW0257",
+        "a4491-09-05-17-at-20h14m55s-_MG_9251"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "21_대화형_강도조율",
+      "section_num": 21,
+      "section_title": "대화형 편집",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "VG-1",
+      "turns": 2,
+      "prompt": "시네마틱하게 만들어줘",
+      "prompt_t2": "좀 과해, 강도 낮춰줘",
+      "baseline": null,
+      "images": [
+        "a3153-IMG_0123"
+      ],
+      "images_new": [
+        "a3153-IMG_0123"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "21_대화형_방향반전",
+      "section_num": 21,
+      "section_title": "대화형 편집",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "VG-2",
+      "turns": 2,
+      "prompt": "따뜻하게 해줘",
+      "prompt_t2": "아니 반대로 차갑고 시크하게 해줘",
+      "baseline": null,
+      "images": [
+        "human_5"
+      ],
+      "images_new": [
+        "human_5"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "21_대화형_미세조정",
+      "section_num": 21,
+      "section_title": "대화형 편집",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "VG-3",
+      "turns": 2,
+      "prompt": "깔끔하고 모던하게 해줘",
+      "prompt_t2": "조금만 더 대비 살려줘",
+      "baseline": null,
+      "images": [
+        "human_6"
+      ],
+      "images_new": [
+        "human_6"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "21_대화형_자연스럽게마무리",
+      "section_num": 21,
+      "section_title": "대화형 편집",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "VG-4",
+      "turns": 2,
+      "prompt": "깔끔하고 자연스럽게 보정해줘",
+      "prompt_t2": "딱 좋은데 아주 살짝만 대비 더 살려줘",
+      "baseline": null,
+      "images": [
+        "human_6"
+      ],
+      "images_new": [
+        "human_6"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "21_대화형_강도절반",
+      "section_num": 21,
+      "section_title": "대화형 편집",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "VG-5",
+      "turns": 2,
+      "prompt": "깔끔하고 모던하게 그레이딩해줘",
+      "prompt_t2": "필터 느낌 너무 세, 강도 절반으로 은은하게 낮춰줘",
+      "baseline": null,
+      "images": [
+        "human_2"
+      ],
+      "images_new": [
+        "human_2"
+      ],
+      "images_kept": []
+    },
+    {
+      "id": "21_대화형_은은하게톤다운",
+      "section_num": 21,
+      "section_title": "대화형 편집",
+      "cat": "전문가 · 대화형 편집",
+      "legacy_key_prefix": "VG-6",
+      "turns": 2,
+      "prompt": "시네마틱하게 톤 넣어줘",
+      "prompt_t2": "필터 티 나니까 은은하고 자연스럽게 낮춰줘",
+      "baseline": null,
+      "images": [
+        "a3153-IMG_0123"
+      ],
+      "images_new": [
+        "a3153-IMG_0123"
+      ],
+      "images_kept": []
+    }
+  ],
+  "baseline_sections": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

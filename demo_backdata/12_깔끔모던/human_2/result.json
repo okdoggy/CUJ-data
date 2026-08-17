@@ -1,0 +1,39 @@
+{
+  "scenario_id": "11_깔끔모던",
+  "title": "깔끔모던 (안전 프리셋)",
+  "source_image": "human_2.jpeg",
+  "baseline": null,
+  "session_id": "caa66e61-977b-4487-8fcd-02f17f923685",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "깔끔하고 모던하게 해줘",
+    "edit_id": "9547ef7d-d8f3-4011-9659-6d6974bcde0f",
+    "latency_ms": 16153,
+    "chat_message": "Apply a clean and modern aesthetic to the image.",
+    "intent": "Apply a clean and modern aesthetic to the image.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "clean_modern",
+          "lut_intensity": 0.8,
+          "skin_protection": true,
+          "grain_amount": 0.15,
+          "halation": 0.1,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 0.9
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 19.06
+  }
+}

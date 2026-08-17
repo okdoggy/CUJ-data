@@ -1,0 +1,67 @@
+{
+  "scenario_id": "20_대화형_방향반전",
+  "title": "대화형 편집",
+  "source_image": "human_5.jpg",
+  "baseline": null,
+  "session_id": "3c2cbf53-2ff3-49d0-8222-0d203e2c7d4c",
+  "ok": true,
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "따뜻하게 해줘",
+      "edit_id": "47a70240-e8aa-41d5-a337-e7a77705c9e5",
+      "latency_ms": 14591,
+      "chat_message": "Make the image warmer by adjusting the color temperature and applying a warm film look.",
+      "intent": "Make the image warmer by adjusting the color temperature and applying a warm film look.",
+      "is_correction": null,
+      "tools_used": [
+        {
+          "tool_name": "color_grade",
+          "params": {
+            "gain_r": 1.08,
+            "gain_b": 0.92
+          }
+        },
+        {
+          "tool_name": "expert_grade",
+          "params": {
+            "preset": "warm_kodak",
+            "lut_intensity": 0.9,
+            "skin_protection": true,
+            "grain_amount": 0.2,
+            "halation": 0.15,
+            "use_aces": true
+          }
+        }
+      ],
+      "tool_count": 2,
+      "image_saved": "after_1.jpg",
+      "elapsed_s": 17.48
+    },
+    {
+      "turn": 2,
+      "prompt": "아니 반대로 차갑고 시크하게 해줘",
+      "edit_id": "4b0a2697-1a4f-484e-b397-372105a3eec5",
+      "latency_ms": 12884,
+      "chat_message": "Apply a cold and chic aesthetic to the image.",
+      "intent": "Apply a cold and chic aesthetic to the image.",
+      "is_correction": null,
+      "tools_used": [
+        {
+          "tool_name": "expert_grade",
+          "params": {
+            "preset": "apple_neutral",
+            "lut_intensity": 0.85,
+            "skin_protection": true,
+            "grain_amount": 0.2,
+            "halation": 0.1,
+            "use_aces": true
+          }
+        }
+      ],
+      "tool_count": 1,
+      "image_saved": "after_2.jpg",
+      "elapsed_s": 17.63
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "scenario_id": "21_예쁘게_해줘",
+  "title": "사진 좀 예쁘게 만들어줘 (포괄 지시)",
+  "source_image": "a3905-kme_177.jpg",
+  "baseline": "fivek",
+  "session_id": "517abf88-0ffe-4d86-bcda-464865c5d1cb",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "사진 좀 예쁘게 만들어줘",
+    "edit_id": "0d7af528-3724-49d2-b61b-6a5c062b25f1",
+    "latency_ms": 25903,
+    "chat_message": "Enhance the landscape image to make it look more vibrant and clear, correcting the warm color cast and applying a natural, vivid color grade.",
+    "intent": "Enhance the landscape image to make it look more vibrant and clear, correcting the warm color cast and applying a natural, vivid color grade.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gain_r": 0.92,
+          "gain_b": 1.08
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "fuji_velvia",
+          "lut_intensity": 0.9,
+          "skin_protection": false,
+          "grain_amount": 0.15,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.5
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 30.09
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "scenario_id": "05_역광_보정",
+  "title": "역광 보정",
+  "source_image": "a3886-_DGW6415.jpg",
+  "baseline": "fivek",
+  "session_id": "5a04f94d-ec7c-4f66-aa82-ad9b7cd4e914",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "역광 사진이라 전체적으로 어두워, 사진 전체를 밝고 화사하게 살려줘",
+    "edit_id": "60d7c8ef-f1eb-450c-b9ab-13eb719fddf5",
+    "latency_ms": 20040,
+    "chat_message": "Make the entire backlit photo brighter and more vibrant.",
+    "intent": "Make the entire backlit photo brighter and more vibrant.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "clean_modern",
+          "lut_intensity": 0.8,
+          "skin_protection": false,
+          "grain_amount": 0.1,
+          "halation": 0.1,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 23.0
+  }
+}

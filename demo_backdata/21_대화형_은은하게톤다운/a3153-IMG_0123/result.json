@@ -1,0 +1,48 @@
+{
+  "scenario_id": "20_대화형_은은하게톤다운",
+  "title": "대화형 편집",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": null,
+  "session_id": "686eaed2-8148-436d-9f7c-431e7fa5d386",
+  "ok": true,
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "시네마틱하게 톤 넣어줘",
+      "edit_id": "fe1c574a-c8ef-4b10-82de-7fce618f34cd",
+      "latency_ms": 20675,
+      "chat_message": "Apply a cinematic tone to the image.",
+      "intent": "Apply a cinematic tone to the image.",
+      "is_correction": null,
+      "tools_used": [
+        {
+          "tool_name": "expert_grade",
+          "params": {
+            "preset": "teal_orange",
+            "lut_intensity": 0.9,
+            "skin_protection": true,
+            "grain_amount": 0.3,
+            "halation": 0.15,
+            "use_aces": true
+          }
+        }
+      ],
+      "tool_count": 1,
+      "image_saved": "after_1.jpg",
+      "elapsed_s": 23.94
+    },
+    {
+      "turn": 2,
+      "prompt": "필터 티 나니까 은은하고 자연스럽게 낮춰줘",
+      "edit_id": "fa8f75fa-7b5e-4459-815b-d700688b6dc0",
+      "latency_ms": 10496,
+      "chat_message": "이전 상태로 되돌렸습니다.",
+      "intent": "session_action",
+      "is_correction": null,
+      "tools_used": [],
+      "tool_count": 0,
+      "image_saved": "after_2.jpg",
+      "elapsed_s": 14.53
+    }
+  ]
+}

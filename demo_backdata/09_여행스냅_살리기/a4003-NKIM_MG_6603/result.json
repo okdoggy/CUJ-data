@@ -1,0 +1,33 @@
+{
+  "scenario_id": "08_여행스냅_살리기",
+  "title": "여행 스냅 살리기 (복합 자동 chain)",
+  "source_image": "a4003-NKIM_MG_6603.jpg",
+  "baseline": "fivek",
+  "session_id": "dbf20676-7290-49a7-8fef-65c3d35209ab",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "여행 사진인데 밋밋해, 화사하고 시네마틱하게 살려줘",
+    "edit_id": "e28ccf97-1906-4d37-9063-627d762ac1e4",
+    "latency_ms": 19931,
+    "chat_message": "Enhance the travel photo to be more vibrant and cinematic, addressing its blandness.",
+    "intent": "Enhance the travel photo to be more vibrant and cinematic, addressing its blandness.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "teal_orange",
+          "lut_intensity": 0.95,
+          "skin_protection": true,
+          "grain_amount": 0.25,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 23.14
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "scenario_id": "09_크롭_인물기준",
+  "title": "크롭",
+  "source_image": "a3477-_DSC0048.jpg",
+  "baseline": null,
+  "session_id": "af6e6f3a-e8ae-488b-b8fe-853361367ec3",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "인물 얼굴 기준으로 클로즈업 되게 잘라줘",
+    "edit_id": "0737c4b4-008a-4d19-a7b9-12ac44c5841d",
+    "latency_ms": 16485,
+    "chat_message": "Crop the image to a close-up of the person's face.",
+    "intent": "Crop the image to a close-up of the person's face.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "region_mask",
+        "params": {
+          "description": "얼굴",
+          "feather": 0
+        }
+      },
+      {
+        "tool_name": "crop",
+        "params": {
+          "bbox_ref": "face_mask",
+          "padding": 0.1
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 19.26
+  }
+}

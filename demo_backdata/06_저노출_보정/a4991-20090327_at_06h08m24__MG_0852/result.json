@@ -1,0 +1,45 @@
+{
+  "scenario_id": "06_저노출_보정",
+  "title": "저노출 보정",
+  "source_image": "a4991-20090327_at_06h08m24__MG_0852.jpg",
+  "baseline": "fivek",
+  "session_id": "c662fde5-4208-4314-ad5c-6cb045221715",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "너무 어둡게 나왔어, 밝고 화사하게 살려줘",
+    "edit_id": "eb9b9ec8-be17-44c5-b0a5-d1a5d7307cc9",
+    "latency_ms": 18015,
+    "chat_message": "Brighten the dark image and apply a vibrant, clean aesthetic while protecting skin tones.",
+    "intent": "Brighten the dark image and apply a vibrant, clean aesthetic while protecting skin tones.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 30
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "clean_modern",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.15,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.3
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 21.25
+  }
+}

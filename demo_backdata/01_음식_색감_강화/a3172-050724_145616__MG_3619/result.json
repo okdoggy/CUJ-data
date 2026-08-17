@@ -1,0 +1,39 @@
+{
+  "scenario_id": "01_음식_색감_강화",
+  "title": "음식 색감 강화",
+  "source_image": "a3172-050724_145616__MG_3619.jpg",
+  "baseline": "fivek",
+  "session_id": "695bc748-cc97-4020-b4a0-aa414f30bb02",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘.",
+    "edit_id": "5c78b138-ee89-47f2-a946-44b7e95b8eb0",
+    "latency_ms": 22804,
+    "chat_message": "Enhance the vibrancy and brightness of the food colors without applying a strong filter or altering the overall tone.",
+    "intent": "Enhance the vibrancy and brightness of the food colors without applying a strong filter or altering the overall tone.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 25
+        }
+      },
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gamma_r": 1.05,
+          "gamma_g": 1.05,
+          "gamma_b": 1.05,
+          "gain_r": 1.05,
+          "gain_g": 1.03,
+          "gain_b": 0.98
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 26.08
+  }
+}

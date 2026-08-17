@@ -1,0 +1,33 @@
+{
+  "scenario_id": "08_여행스냅_살리기",
+  "title": "여행 스냅 살리기 (복합 자동 chain)",
+  "source_image": "a4892-DSC_0126.jpg",
+  "baseline": "fivek",
+  "session_id": "31bb88e9-8dd0-456e-ad37-e61701dc4cbc",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "여행 사진인데 밋밋해, 화사하고 시네마틱하게 살려줘",
+    "edit_id": "87cc701c-67d3-489e-911e-4a401dc9d22d",
+    "latency_ms": 18214,
+    "chat_message": "Apply a bright and cinematic color grade to the travel photo.",
+    "intent": "Apply a bright and cinematic color grade to the travel photo.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "teal_orange",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.0,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 21.5
+  }
+}

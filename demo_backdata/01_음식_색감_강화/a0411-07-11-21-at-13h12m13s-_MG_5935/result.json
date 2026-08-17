@@ -1,0 +1,39 @@
+{
+  "scenario_id": "01_음식_색감_강화",
+  "title": "음식 색감 강화",
+  "source_image": "a0411-07-11-21-at-13h12m13s-_MG_5935.jpg",
+  "baseline": "fivek",
+  "session_id": "155fc821-6179-48d4-8c3b-9c78f2cd6de4",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "음식 색이 좀 칙칙해 보여. 근데 필터 느낌 안 나게, 톤 전체는 바뀌지 않게 살짝만 화사하게 살려줘.",
+    "edit_id": "7f4914ff-6b20-4bd9-9af2-5fcc511faf91",
+    "latency_ms": 20083,
+    "chat_message": "음식 색감을 칙칙하지 않게, 필터 느낌 없이 전체 톤을 유지하며 살짝 화사하게 만듭니다.",
+    "intent": "음식 색감을 칙칙하지 않게, 필터 느낌 없이 전체 톤을 유지하며 살짝 화사하게 만듭니다.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 20
+        }
+      },
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gamma_r": 1.03,
+          "gamma_g": 1.03,
+          "gamma_b": 1.03,
+          "gain_r": 1.03,
+          "gain_g": 1.03,
+          "gain_b": 1.03
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 23.42
+  }
+}

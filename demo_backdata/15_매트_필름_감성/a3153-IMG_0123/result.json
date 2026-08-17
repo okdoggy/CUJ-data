@@ -1,0 +1,33 @@
+{
+  "scenario_id": "14_매트_필름_감성",
+  "title": "매트 필름 감성",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": null,
+  "session_id": "88623ce2-9956-4eed-aa27-151be7d0568e",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "인스타 감성 매트 필름 느낌으로 해줘",
+    "edit_id": "8294ce64-13ef-4737-9c9a-469542706954",
+    "latency_ms": 15560,
+    "chat_message": "Apply an Instagram-style matte film aesthetic to the image.",
+    "intent": "Apply an Instagram-style matte film aesthetic to the image.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "matte_fade",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.2,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 18.89
+  }
+}

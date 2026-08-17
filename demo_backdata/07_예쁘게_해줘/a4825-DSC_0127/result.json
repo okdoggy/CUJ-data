@@ -1,0 +1,33 @@
+{
+  "scenario_id": "21_예쁘게_해줘",
+  "title": "사진 좀 예쁘게 만들어줘 (포괄 지시)",
+  "source_image": "a4825-DSC_0127.jpg",
+  "baseline": "fivek",
+  "session_id": "4634da86-2b5e-42e8-be93-6cc2f8a4df04",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "사진 좀 예쁘게 만들어줘",
+    "edit_id": "6369c3bc-3afe-415c-a744-07e96ee24320",
+    "latency_ms": 23437,
+    "chat_message": "Enhance the photo's aesthetic to make it look 'pretty' with a warm, classic filmic style.",
+    "intent": "Enhance the photo's aesthetic to make it look 'pretty' with a warm, classic filmic style.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "warm_kodak",
+          "lut_intensity": 0.85,
+          "skin_protection": true,
+          "grain_amount": 0.25,
+          "halation": 0.1,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 27.09
+  }
+}

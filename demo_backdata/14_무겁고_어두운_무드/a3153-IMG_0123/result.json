@@ -1,0 +1,33 @@
+{
+  "scenario_id": "13_무겁고_어두운_무드",
+  "title": "무겁고 어두운 무드",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": null,
+  "session_id": "7927d611-9df9-4831-8aee-31562df5c863",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "어둡고 무게감 있는 무드로 만들어줘",
+    "edit_id": "94203b83-db3f-4728-8fe9-a3aca6c13912",
+    "latency_ms": 16743,
+    "chat_message": "Apply a dark and weighty mood to the image using a cinematic color grade.",
+    "intent": "Apply a dark and weighty mood to the image using a cinematic color grade.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "moody_dark",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.3,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 20.25
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "scenario_id": "03_화이트밸런스_교정",
+  "title": "화이트밸런스 교정 (캐스트 제거)",
+  "source_image": "a4224-DSC_0321.jpg",
+  "baseline": "fivek",
+  "session_id": "86d5e664-c1f5-4516-9eb7-b848d3ccc9f8",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "조명 때문에 누렇게 떴어, 자연광처럼 화이트밸런스 맞춰줘",
+    "edit_id": "67f78292-f5ad-40c5-a229-fd2ff15ee079",
+    "latency_ms": 22936,
+    "chat_message": "Adjust the white balance to remove the yellow cast and achieve a natural light look.",
+    "intent": "Adjust the white balance to remove the yellow cast and achieve a natural light look.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 15
+        }
+      },
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gain_r": 0.92,
+          "gain_b": 1.08
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "apple_neutral",
+          "lut_intensity": 0.75,
+          "skin_protection": false,
+          "grain_amount": 0.15,
+          "halation": 0.05,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 26.31
+  }
+}

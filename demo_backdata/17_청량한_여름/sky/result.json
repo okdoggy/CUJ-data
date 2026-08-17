@@ -1,0 +1,33 @@
+{
+  "scenario_id": "16_청량한_여름",
+  "title": "청량한 여름",
+  "source_image": "sky.jpg",
+  "baseline": null,
+  "session_id": "e89a32fa-b642-434e-9910-f3a561b09f68",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "청량하고 시원한 여름 느낌으로 해줘",
+    "edit_id": "f247ad02-6f1f-4323-bf7a-23284e6caf25",
+    "latency_ms": 17768,
+    "chat_message": "Transform the image to have a refreshing and cool summer feel.",
+    "intent": "Transform the image to have a refreshing and cool summer feel.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "summer_pastel",
+          "lut_intensity": 0.9,
+          "skin_protection": false,
+          "grain_amount": 0.15,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 20.86
+  }
+}

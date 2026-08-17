@@ -1,0 +1,40 @@
+{
+  "scenario_id": "16_청량한_여름",
+  "title": "청량한 여름",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": null,
+  "session_id": "cba6073c-82dd-46a9-b750-3e4b6a1e19ba",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "청량하고 시원한 여름 느낌으로 해줘",
+    "edit_id": "8395dd0f-5d17-4c50-8ffd-8c26a24d8254",
+    "latency_ms": 17616,
+    "chat_message": "Transform the image to have a refreshing and cool summer aesthetic.",
+    "intent": "Transform the image to have a refreshing and cool summer aesthetic.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gain_r": 0.92,
+          "gain_b": 1.08
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "summer_pastel",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.2,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 20.86
+  }
+}

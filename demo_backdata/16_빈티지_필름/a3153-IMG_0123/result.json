@@ -1,0 +1,33 @@
+{
+  "scenario_id": "15_빈티지_필름",
+  "title": "빈티지 필름",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": null,
+  "session_id": "8f238905-c52e-40e0-ae01-8504e9f814fd",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "빈티지 필름 카메라로 찍은 것처럼 해줘",
+    "edit_id": "34582ec2-c52d-48b1-9b7a-09098fba14df",
+    "latency_ms": 14464,
+    "chat_message": "Apply a vintage film camera aesthetic to the image.",
+    "intent": "Apply a vintage film camera aesthetic to the image.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "vintage_analog",
+          "lut_intensity": 0.9,
+          "skin_protection": true,
+          "grain_amount": 0.4,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 17.72
+  }
+}

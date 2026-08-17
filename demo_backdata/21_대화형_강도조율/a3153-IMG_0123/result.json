@@ -1,0 +1,60 @@
+{
+  "scenario_id": "20_대화형_강도조율",
+  "title": "대화형 편집",
+  "source_image": "a3153-IMG_0123.jpg",
+  "baseline": null,
+  "session_id": "a4e313a4-9fb6-4249-bf6c-e794e5210670",
+  "ok": true,
+  "turns": [
+    {
+      "turn": 1,
+      "prompt": "시네마틱하게 만들어줘",
+      "edit_id": "b66844ef-0943-4191-9acf-15f4bd93839d",
+      "latency_ms": 20999,
+      "chat_message": "Apply a cinematic color grading to the image.",
+      "intent": "Apply a cinematic color grading to the image.",
+      "is_correction": null,
+      "tools_used": [
+        {
+          "tool_name": "expert_grade",
+          "params": {
+            "preset": "teal_orange",
+            "lut_intensity": 0.9,
+            "skin_protection": true,
+            "grain_amount": 0.2,
+            "halation": 0.15,
+            "use_aces": true
+          }
+        }
+      ],
+      "tool_count": 1,
+      "image_saved": "after_1.jpg",
+      "elapsed_s": 24.44
+    },
+    {
+      "turn": 2,
+      "prompt": "좀 과해, 강도 낮춰줘",
+      "edit_id": "d31098eb-665b-4021-a7ba-adf2c7673308",
+      "latency_ms": 16828,
+      "chat_message": "Reduce the intensity of the previously applied cinematic color grading.",
+      "intent": "Reduce the intensity of the previously applied cinematic color grading.",
+      "is_correction": null,
+      "tools_used": [
+        {
+          "tool_name": "expert_grade",
+          "params": {
+            "preset": "teal_orange",
+            "lut_intensity": 0.7,
+            "skin_protection": true,
+            "grain_amount": 0.2,
+            "halation": 0.15,
+            "use_aces": true
+          }
+        }
+      ],
+      "tool_count": 1,
+      "image_saved": "after_2.jpg",
+      "elapsed_s": 21.72
+    }
+  ]
+}

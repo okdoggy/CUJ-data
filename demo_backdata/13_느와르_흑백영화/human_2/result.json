@@ -1,0 +1,33 @@
+{
+  "scenario_id": "12_느와르_흑백영화",
+  "title": "느와르 흑백 영화",
+  "source_image": "human_2.jpeg",
+  "baseline": null,
+  "session_id": "146e7308-6c4c-4a34-b100-4ae29c16f943",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "느와르 영화의 한 장면처럼 만들어줘",
+    "edit_id": "afbff010-a9af-4f26-be3a-977e4a39b23b",
+    "latency_ms": 14678,
+    "chat_message": "Transform the image into a film noir style scene.",
+    "intent": "Transform the image into a film noir style scene.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "film_noir",
+          "lut_intensity": 0.95,
+          "skin_protection": true,
+          "grain_amount": 0.4,
+          "halation": 0.0,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 17.49
+  }
+}

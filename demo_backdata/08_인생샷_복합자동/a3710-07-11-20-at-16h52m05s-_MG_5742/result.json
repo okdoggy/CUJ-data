@@ -1,0 +1,39 @@
+{
+  "scenario_id": "07_인생샷_복합자동",
+  "title": "인생샷 (복합 자동 chain)",
+  "source_image": "a3710-07-11-20-at-16h52m05s-_MG_5742.jpg",
+  "baseline": "fivek",
+  "session_id": "ebbeeb49-b957-4406-a628-b6a0b96238d7",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "이 사진 인생샷으로 만들어줘",
+    "edit_id": "7084aeca-dd18-4f48-b9e4-9fa4dfb85650",
+    "latency_ms": 19923,
+    "chat_message": "Enhance the image to create a stunning 'life shot' by applying a cinematic color grade and sharpening details.",
+    "intent": "Enhance the image to create a stunning 'life shot' by applying a cinematic color grade and sharpening details.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "golden_hour",
+          "lut_intensity": 0.9,
+          "skin_protection": false,
+          "grain_amount": 0.2,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.2
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 23.43
+  }
+}

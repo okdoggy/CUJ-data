@@ -1,0 +1,29 @@
+{
+  "scenario_id": "19_주파수분리_피부_리터치",
+  "title": "주파수 분리 피부 리터치",
+  "source_image": "a4388-_DGW0257.jpg",
+  "baseline": null,
+  "session_id": "facf1555-136f-4bd5-9310-9a8999a4164c",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "주파수 분리로 피부 리터치 해줘. 하이 프리퀀시(모공·피부 결)는 그대로 보존하고, 로우 프리퀀시에서 블레미시와 톤 얼룩만 정리. 오버스무딩 티 안 나게.",
+    "edit_id": "6b579d39-ff6f-43d8-b55d-805d6d93f304",
+    "latency_ms": 12747,
+    "chat_message": "Perform skin retouching using frequency separation to clean blemishes and tone unevenness while preserving skin texture.",
+    "intent": "Perform skin retouching using frequency separation to clean blemishes and tone unevenness while preserving skin texture.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "frequency_separation",
+        "params": {
+          "radius": 20,
+          "smoothing": 0.7
+        }
+      }
+    ],
+    "tool_count": 1,
+    "image_saved": "after.jpg",
+    "elapsed_s": 15.76
+  }
+}

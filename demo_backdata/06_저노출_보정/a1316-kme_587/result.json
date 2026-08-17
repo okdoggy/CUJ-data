@@ -1,0 +1,45 @@
+{
+  "scenario_id": "06_저노출_보정",
+  "title": "저노출 보정",
+  "source_image": "a1316-kme_587.jpg",
+  "baseline": "fivek",
+  "session_id": "fbeffd50-dac7-4565-bedf-98d594d95820",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "너무 어둡게 나왔어, 밝고 화사하게 살려줘",
+    "edit_id": "77aeb28f-5024-42e5-bd41-8cea2cd88e3b",
+    "latency_ms": 17759,
+    "chat_message": "Make the dark image brighter and more vibrant with a clean, modern look, and improve sharpness.",
+    "intent": "Make the dark image brighter and more vibrant with a clean, modern look, and improve sharpness.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 25
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "clean_modern",
+          "lut_intensity": 0.85,
+          "skin_protection": true,
+          "grain_amount": 0.2,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.3
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 21.04
+  }
+}

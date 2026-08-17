@@ -1,0 +1,36 @@
+{
+  "scenario_id": "09_크롭_음식기준",
+  "title": "크롭",
+  "source_image": "a0411-07-11-21-at-13h12m13s-_MG_5935.jpg",
+  "baseline": null,
+  "session_id": "93c27909-6317-4627-b5a2-b916223f11ec",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "음식 기준으로 클로즈업 되게 잘라줘",
+    "edit_id": "b742bd42-f418-4ba9-8ba3-be9316b72574",
+    "latency_ms": 15016,
+    "chat_message": "Crop the image to close up on the food.",
+    "intent": "Crop the image to close up on the food.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "region_mask",
+        "params": {
+          "description": "음식",
+          "feather": 0
+        }
+      },
+      {
+        "tool_name": "crop",
+        "params": {
+          "bbox_ref": "food_mask",
+          "padding": 0.1
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 17.82
+  }
+}

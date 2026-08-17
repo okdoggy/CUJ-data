@@ -1,0 +1,46 @@
+{
+  "scenario_id": "06_저노출_보정",
+  "title": "저노출 보정",
+  "source_image": "a4958-_DSC0036-1.jpg",
+  "baseline": "fivek",
+  "session_id": "797cc100-ca15-48c3-9be8-24421b88f85b",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "너무 어둡게 나왔어, 밝고 화사하게 살려줘",
+    "edit_id": "fa93095f-00ee-48bb-a3e5-51d105bfab54",
+    "latency_ms": 17811,
+    "chat_message": "Make the dark image brighter and more vibrant with a fresh, pastel mood.",
+    "intent": "Make the dark image brighter and more vibrant with a fresh, pastel mood.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 30
+        }
+      },
+      {
+        "tool_name": "color_grade",
+        "params": {
+          "gain_r": 0.95,
+          "gain_b": 1.05
+        }
+      },
+      {
+        "tool_name": "expert_grade",
+        "params": {
+          "preset": "summer_pastel",
+          "lut_intensity": 0.85,
+          "skin_protection": true,
+          "grain_amount": 0.2,
+          "halation": 0.15,
+          "use_aces": true
+        }
+      }
+    ],
+    "tool_count": 3,
+    "image_saved": "after.jpg",
+    "elapsed_s": 20.76
+  }
+}

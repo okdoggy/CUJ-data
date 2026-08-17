@@ -1,0 +1,34 @@
+{
+  "scenario_id": "04_흐릿한_사진_선명하게",
+  "title": "흐릿한 사진 선명하게 (소스 의존적)",
+  "source_image": "a2760-IMG_0016.jpg",
+  "baseline": null,
+  "session_id": "1f6be563-ee1c-4d2c-8613-96191444c894",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "사진이 흐려, 선명하게 해줘",
+    "edit_id": "57fc24c1-7727-46e8-a53f-326007c9c38a",
+    "latency_ms": 10071,
+    "chat_message": "To brighten and sharpen the blurry image.",
+    "intent": "To brighten and sharpen the blurry image.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "brightness",
+        "params": {
+          "beta": 25
+        }
+      },
+      {
+        "tool_name": "sharpen",
+        "params": {
+          "amount": 1.5
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 13.25
+  }
+}

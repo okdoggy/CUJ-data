@@ -1,0 +1,36 @@
+{
+  "scenario_id": "09_크롭_메인피사체",
+  "title": "크롭",
+  "source_image": "a4053-07-09-16-at-11h25m31s-_MG_3439.jpg",
+  "baseline": null,
+  "session_id": "3d33426f-a00e-4c01-b6ee-bfbcf96a059d",
+  "ok": true,
+  "turn": {
+    "turn": 1,
+    "prompt": "사진의 메인 피사체 기준으로 잘라줘",
+    "edit_id": "bbb2b1b4-5fff-4cd0-8924-1edcbc83fc30",
+    "latency_ms": 16304,
+    "chat_message": "Crop the image around the main subject, the Statue of Liberty.",
+    "intent": "Crop the image around the main subject, the Statue of Liberty.",
+    "is_correction": null,
+    "tools_used": [
+      {
+        "tool_name": "region_mask",
+        "params": {
+          "description": "자유의 여신상",
+          "feather": 0
+        }
+      },
+      {
+        "tool_name": "crop",
+        "params": {
+          "bbox_ref": "statue_of_liberty_mask",
+          "padding": 0.1
+        }
+      }
+    ],
+    "tool_count": 2,
+    "image_saved": "after.jpg",
+    "elapsed_s": 19.2
+  }
+}
